@@ -1,0 +1,669 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body { 
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+body {
+  @apply flex min-h-screen w-full justify-center bg-default-bg md:items-start relative;
+}
+
+/** Hide body overflow when drawer-container is visible**/
+body:has( > .drawer-container) {
+ overflow: hidden;
+}
+
+
+.drawer {
+  @apply sm:max-h-full sm:min-h-full w-full overflow-auto bg-white px-6 shadow-lg;
+}
+
+.drawer-body {
+  @apply m-0 -mx-6 p-0 pb-32 sm:pb-0 px-6 overflow-auto; 
+}
+.drawer-body {
+  height: calc(100dvh - 240.2px);
+  max-height: calc(100dvh - 240.2px);
+  min-height: calc(100dvh - 240.2px);
+}
+
+
+.drawer-header {
+  @apply -mx-6 flex flex-row items-center justify-between border-b border-colbert-200 px-6 py-4 text-xl;
+}
+
+.drawer-footer {
+  @apply fixed bottom-0 z-10 -mx-6 w-full border-t border-colbert-200 bg-white px-6 py-4;
+}
+
+ul label.card-list {
+  @apply relative hover:cursor-pointer;
+}
+
+
+.card-list {
+  @apply mt-4;
+}
+
+.card-list .card {
+  @apply mt-4 flex flex-row content-center gap-2 rounded-md border border-colbert-300 bg-white p-4 align-middle shadow-sm;
+}
+
+.card-list .card svg {
+  @apply self-center;
+}
+
+.card-list .card:has(input:checked) {
+  @apply border-lavender-400;
+}
+
+.card-list .card:has(input:not(:checked)) {
+  @apply hover:border-colbert-400;
+}
+
+/** card  & Data table **/
+.card {
+  @apply relative self-start rounded-md border border-colbert-300 bg-white shadow-sm;
+}
+
+/***********************************
+*
+*   Data Table / Data List
+*   --------------------------------
+*   Classes that apply to all
+*  
+************************************/
+
+.data-table {
+  @apply flex w-full flex-col items-start;
+}
+
+.data-table .cell {
+  @apply flex items-center justify-start;
+}
+
+.data-table .data-table-header {
+  @apply hidden border-b border-colbert-200 px-6 pb-2 pt-6 text-xs font-semibold;
+}
+
+.data-table .data-table-row {
+  @apply w-full border-b border-colbert-200 px-6 py-4 text-sm font-light hover:bg-zinc-50 hover:cursor-pointer;
+}
+.data-table .data-table-header,
+.data-table .data-table-row {
+  @apply relative grid gap-x-5 gap-y-2;
+}
+
+.data-table .data-table-header {
+  @apply hidden md:grid;
+}
+
+.data-table .data-table-header,
+.data-table .data-table-row {
+  grid-template-columns: 100%;
+  width: 100%;
+}
+
+
+/***********************************
+*
+*   Grid Templates for DateGrid
+*  
+************************************/
+
+
+/** expenses table **/
+@media (min-width: 1201px) {
+  .data-table.expenses .data-table-header,
+  .data-table.expenses .data-table-row {
+    grid-template-columns: 16px 94px 124px 300px 210px auto 54px 34px;
+  }
+}
+
+/** documents table **/
+@media (min-width: 1201px) {
+  .data-table.documents .data-table-header,
+  .data-table.documents .data-table-row {
+    grid-template-columns: 16px 254px 114px 290px auto  34px;
+  }
+}
+
+/** invoices table **/
+@media (min-width: 1201px) {
+  .data-table.invoices .data-table-header,
+  .data-table.invoices .data-table-row {
+    grid-template-columns: 16px 254px 114px 114px 124px auto 34px;
+  }
+}
+
+
+/** Inventory table **/
+@media (min-width: 1201px) {
+  .data-table.inventory .data-table-header,
+  .data-table.inventory .data-table-row {
+    grid-template-columns: 16px auto 200px 140px 140px 18px 34px;
+  }
+}
+
+/** Customer table **/
+@media (min-width: 1201px) {
+  .data-table.customers .data-table-header,
+  .data-table.customers .data-table-row {
+    grid-template-columns: 16px 330px 200px 200px auto 34px;
+  }
+}
+
+
+/** Transactions table **/
+@media (min-width: 1201px) {
+  .data-table.transactions .data-table-header,
+  .data-table.transactions .data-table-row {
+    grid-template-columns: 16px auto 110px 110px 400px 112px;
+  }
+}
+
+/** Bank Accounts table **/
+@media (min-width: 1201px) {
+  .data-table.bank-accounts .data-table-header,
+  .data-table.bank-accounts .data-table-row {
+    grid-template-columns: 16px 440px auto 100px 100px 34px;
+  }
+}
+
+
+
+
+/***********************************
+*
+*   Expenses Table:
+*   Column specific using nth child
+*  
+************************************/
+
+
+/** checkbox **/
+.data-table.expenses .data-table-row .cell:nth-of-type(1),
+.data-table.expenses .data-table-header div:nth-of-type(1) {
+  @apply order-1;
+}
+
+@media (max-width: 1201px) {
+  .data-table.expenses .data-table-row .cell:nth-of-type(1),
+  .data-table.expenses .data-table-header div:nth-of-type(1) {
+    display: none;
+  }
+}
+
+/** date **/
+.data-table.expenses .data-table-row .cell:nth-of-type(2),
+.data-table.expenses .data-table-header div:nth-of-type(2) {
+  @apply order-3 text-colbert-500 sm:order-2 sm:text-colbert-900;
+}
+
+/** supplier **/
+.data-table.expenses .data-table-row .cell:nth-of-type(3),
+.data-table.expenses .data-table-header div:nth-of-type(3) {
+  @apply order-2 -mb-1.5 text-lg font-medium sm:font-normal sm:order-3 sm:text-sm sm:m-0;
+}
+
+/** override the table header **/
+.data-table.expenses .data-table-header div:nth-of-type(3) {
+  @apply sm:text-xs sm:mb-0 sm:font-semibold;
+}
+
+
+
+/** description **/
+.data-table.expenses .data-table-row .cell:nth-of-type(4),
+.data-table.expenses .data-table-header div:nth-of-type(4) {
+  @apply order-4 block self-center truncate;
+}
+
+/** description **/
+.data-table.expenses .data-table-row .cell:nth-of-type(5),
+.data-table.expenses .data-table-header div:nth-of-type(5) {
+  @apply order-5 truncate;
+}
+
+/** receipt total **/
+.data-table.expenses .data-table-row .cell:nth-of-type(6),
+.data-table.expenses .data-table-header div:nth-of-type(6) {
+  @apply order-6 justify-end text-right;
+}
+
+@media (max-width: 1200px) {
+  .data-table.expenses .data-table-row .cell:nth-of-type(6),
+  .data-table.expenses .data-table-header div:nth-of-type(6) {
+    @apply order-7 text-2xl font-semibold;
+  }
+}
+
+/** icons **/
+.data-table.expenses .data-table-row .cell:nth-of-type(7),
+.data-table.expenses .data-table-header div:nth-of-type(7) {
+  @apply order-1 truncate sm:relative  sm:order-8;
+}
+
+.data-table.expenses .cell.status svg {
+ @apply w-4.5;
+}
+
+@media (max-width: 1200px) {
+  .data-table.expenses .data-table-row .cell:nth-of-type(7) svg {
+    @apply absolute right-36 top-5 h-6 w-6;
+  }
+}
+
+/** action **/
+.data-table .data-table-row .cell:nth-of-type(8),
+.data-table .data-table-header div:nth-of-type(8) {
+  @apply truncate sm:order-9;
+}
+
+
+/***********************************
+*
+*   Invoices Table:
+*   Column specific using nth child
+*  
+************************************/
+
+/** Balance **/
+.data-table.invoices .data-table-row .cell:nth-of-type(6),
+.data-table.invoices .data-table-header div:nth-of-type(6) {
+  @apply justify-end;
+}
+
+
+/***********************************
+*
+*   Inventory Table:
+*   Column specific using nth child
+*  
+************************************/
+
+.data-table.inventory .data-table-row .cell:nth-of-type(4),
+.data-table.inventory .data-table-header div:nth-of-type(4), 
+.data-table.inventory .data-table-row .cell:nth-of-type(5),
+.data-table.inventory .data-table-header div:nth-of-type(5) {
+  @apply justify-end;
+}
+
+
+/***********************************
+*
+*   Customer Table:
+*   Column specific using nth child
+*  
+************************************/
+
+.data-table.customers .data-table-row .cell:nth-of-type(5),
+.data-table.customers .data-table-header div:nth-of-type(5) {
+  @apply justify-end;
+}
+
+
+/***********************************
+*
+*   Bank Table:
+*   Column specific using nth child
+*  
+************************************/
+
+/** credit/debit **/
+.data-table.transactions .data-table-row .cell:nth-of-type(3),
+.data-table.transactions .data-table-header div.cell:nth-of-type(3),
+.data-table.transactions .data-table-row .cell:nth-of-type(4),
+.data-table.transactions .data-table-header div:nth-of-type(4)  {
+  @apply justify-end;
+}
+
+.data-table.transactions .data-table-row .cell:nth-of-type(5),
+.data-table.transactions .data-table-header div.cell:nth-of-type(5) {
+  @apply ml-8;
+}
+
+.data-table.transactions .data-table-row .cell:nth-of-type(6),
+.data-table.transactions .data-table-header div.cell:nth-of-type(6) {
+  @apply justify-end;
+}
+
+
+/***********************************
+*
+*   Bank Account:
+*   Column specific using nth child
+*  
+************************************/
+
+/** Balance **/
+.data-table.bank-accounts .data-table-row .cell:nth-of-type(4),
+.data-table.bank-accounts .data-table-header div:nth-of-type(4)  {
+  @apply justify-end;
+}
+
+
+/***********************************
+*
+*   Chip Component
+*   --------------------------------
+*   Basic chip component
+*  
+************************************/
+
+.chip-container {
+  @apply flex flex-row gap-1;
+}
+
+.chip-container.chips-lg {
+  @apply gap-2;
+}
+
+.chip-container .chip {
+  @apply w-auto whitespace-nowrap rounded-full bg-indigo-50 px-2 text-xs text-indigo-700;
+}
+
+.chip-container.chips-lg .chip {
+  @apply px-3 py-1 text-sm;
+}
+
+.chip-container.chips-sm .chip {
+  @apply px-2 py-0 text-xs;
+}
+
+
+.chip-container .chip + .chip {
+  @apply bg-colbert-700 text-white;
+}
+
+.chip-container .chip.colbert.subtle {
+  @apply bg-colbert-200 text-colbert-900;
+}
+
+.chip-container .chip.indigo.subtle {
+  @apply bg-indigo-100 text-indigo-700;
+}
+
+.chip-container .chip.amber.subtle {
+  @apply bg-amber-100 text-amber-700;
+}
+
+.chip-container .chip.emerald.subtle {
+  @apply bg-emerald-100 text-emerald-700;
+}
+
+
+/***********************************
+*
+*   Action buttons
+*   --------------------------------
+*   Basic action buttons used on
+*   end of of datalists
+*  
+************************************/
+
+.action-buttons {
+  @apply flex flex-row gap-x-2;
+}
+.action-buttons button {
+  @apply relative rounded border border-colbert-400 bg-white p-1.5 shadow-sm hover:border-colbert-500;
+}
+
+.action-buttons button:hover:after {
+  @apply absolute -left-1/2 -top-10 rounded bg-midnight-800 p-2 text-xs text-white content-["tooltip"];
+}
+
+@media (max-width: 1200px) {
+  .cell:has(.action-buttons) {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+
+/***********************************
+*
+*   Buttons + button groups
+*   --------------------------------
+*   Basic button component & styling
+*   as well as button groups.
+*  
+************************************/
+
+.btn {
+  @apply inline-flex items-center justify-center self-center whitespace-nowrap rounded px-4 py-2  text-sm;
+}
+
+.btn svg {
+  @apply mr-1 inline-block w-4;
+}
+
+.btn-group {
+  @apply flex flex-col gap-3 sm:flex-row;
+}
+
+.btn-group .btn {
+  @apply w-full sm:w-auto;
+}
+
+.btn-secondary {
+  @apply border border-colbert-300 text-colbert-900 shadow-sm  hover:bg-lavender-50 hover:text-lavender-700 bg-white;
+}
+
+.btn-secondary.colour {
+  @apply border-lavender-400 text-lavender-600;
+}
+
+.btn-tertiary {
+  @apply text-lavender-500 hover:bg-lavender-50 hover:text-lavender-700;
+}
+
+.btn-primary {
+  @apply bg-lavender-500 text-white hover:bg-lavender-400;
+}
+
+.btn.btn-sm {
+  @apply px-3 text-xs leading-none h-8;
+}
+.btn.btn-md {
+  @apply h-10 px-4;
+}
+
+.btn.btn-lg {
+  @apply text-base;
+}
+
+
+/***********************************
+*
+*   Floating Action Button
+*   --------------------------------
+*   Basic floating action button for
+*   quick actions on mobile devices
+*  
+************************************/
+
+
+.floating-action {
+  @apply fixed bottom-6 right-6;
+}
+.floating-action button {
+  @apply flex  h-16 w-16 items-center justify-center rounded-full bg-lavender-500 align-middle text-3xl text-white shadow-lg transition-all  duration-500 ease-in-out focus:bg-lavender-400 sm:hidden;
+}
+
+.floating-action button svg {
+  @apply transition-transform duration-500 ease-in-out;
+}
+
+.floating-action button:focus svg {
+  @apply rotate-[135deg];
+}
+
+.floating-action .floating-menu {
+  @apply absolute  right-0 top-0  -translate-y-66;
+}
+
+.floating-menu ul {
+  @apply flex flex-col gap-4;
+}
+
+.floating-menu ul li {
+  @apply w-auto translate-x-80 flex-nowrap whitespace-nowrap rounded-xl bg-white px-4 py-6 shadow-lg transition-all duration-500;
+}
+
+.floating-menu ul li:nth-of-type(2) {
+  @apply delay-75;
+}
+
+.floating-menu ul li:nth-of-type(3) {
+  @apply delay-150;
+}
+
+/** animate in **/
+.floating-action button:focus + .floating-menu ul li {
+  @apply translate-x-0;
+}
+
+
+/***********************************
+*
+*  Inputs + Input groups
+*   --------------------------------
+*   Basic components and styling for
+*   inputs, selects and grouping
+*  
+************************************/
+
+label {
+  @apply text-sm text-colbert-500;
+}
+
+.input-group {
+  @apply flex flex-col;
+}
+
+
+input[type="text"],
+select,
+textarea {
+  @apply mt-1 appearance-none rounded border border-colbert-300 px-3 py-2.5 shadow-sm;
+}
+
+select {
+  @apply relative;
+}
+select + svg {
+  @apply absolute bottom-1.5 right-2;
+}
+
+.input-group.compact input[type="text"],
+.input-group.compact select,
+.input-group.compact textarea {
+  @apply px-2.5 py-1.5;
+}
+
+input[type="checkbox"] {
+  @apply block h-4 w-4 border border-colbert-300 shadow-sm;
+}
+
+input[type="radio"] {
+  @apply appearance-none self-center;
+}
+
+/** dot thingo **/
+input[type="radio"] + .radio-check {
+  @apply relative block h-4 w-4 flex-shrink-0 self-center rounded-full border border-colbert-400 bg-white shadow-sm;
+}
+
+input[type="radio"]:checked + .radio-check {
+  @apply border-lavender-500 bg-lavender-50;
+}
+
+input[type="radio"]:checked + .radio-check:after {
+  @apply absolute left-[2px] top-[2px] h-2.5 w-2.5 flex-shrink-0 rounded-full bg-lavender-500;
+}
+
+input[type="radio"] + .radio-check:after {
+  content: " ";
+}
+
+
+/***********************************
+***  Expense
+***********************************/
+
+.append-button.floating {
+  @apply absolute -bottom-12 right-0;
+}
+
+
+/***********************************
+***  attachment
+***********************************/
+
+
+.attachments {
+  @apply my-4  w-full mb-0 ;
+}
+
+.attachments .attachment {
+  @apply relative flex w-full flex-row items-center justify-start gap-x-4 rounded-md bg-white hover:bg-indigo-50 p-2.5 hover:cursor-pointer;
+}
+
+.attachments .attachment-thumbnail {
+  @apply block w-11;
+}
+
+.attachments .action-buttons {
+  @apply ml-auto;
+}
+
+
+.attachment .attachment-name {
+  @apply text-sm font-bold;
+}
+
+.attachment .attachment-details {
+  @apply text-xs font-normal text-colbert-500;
+}
+
+
+/***********************************
+***  Summary table
+***********************************/
+
+
+.expense-summary table tr td {
+  @apply py-1.5 text-base md:text-sm;
+}
+
+.expense-summary table tr td:nth-of-type(2) {
+  @apply text-right text-colbert-900;
+}
+
+.expense-summary table tfoot tr td {
+  @apply text-base font-semibold;
+}
