@@ -86,7 +86,7 @@ export default function page() {
                     <path d="M9 5.56348V2.56348H1.5V16.0635H16.5V5.56348H9ZM4.5 14.5635H3V13.0635H4.5V14.5635ZM4.5 11.5635H3V10.0635H4.5V11.5635ZM4.5 8.56348H3V7.06348H4.5V8.56348ZM4.5 5.56348H3V4.06348H4.5V5.56348ZM7.5 14.5635H6V13.0635H7.5V14.5635ZM7.5 11.5635H6V10.0635H7.5V11.5635ZM7.5 8.56348H6V7.06348H7.5V8.56348ZM7.5 5.56348H6V4.06348H7.5V5.56348ZM15 14.5635H9V13.0635H10.5V11.5635H9V10.0635H10.5V8.56348H9V7.06348H15V14.5635ZM13.5 8.56348H12V10.0635H13.5V8.56348ZM13.5 11.5635H12V13.0635H13.5V11.5635Z" fill="#121224" />
                   </svg>
 
-                  <div className="font-semibold">Websites 'R Us</div>
+                  <div className="font-semibold">Websites R Us</div>
                 </div>
                 <div className="text-xs text-colbert-500 hover:text-lavender-600 hover:underline">sales@websites-r-us.com.au</div>
               </div>

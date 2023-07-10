@@ -37,7 +37,7 @@ export default function page() {
           <div className="data-table-row">
             <div className="cell"><input type="checkbox" /></div>
             <div className="cell">18/05/2022</div>
-            <div className="cell">Terry's Tiles</div>
+            <div className="cell">Terry  s Tiles</div>
             <div className="cell">This is an example of a description</div>
             <div className="cell">
               <div className="chip-container"><div className="chip">Marketing & Advertising</div></div>
@@ -88,7 +88,7 @@ export default function page() {
           <div className="data-table-row">
             <div className="cell"><input type="checkbox" /></div>
             <div className="cell">18/05/2022</div>
-            <div className="cell">Terry's Tiles</div>
+            <div className="cell">Terry  s Tiles</div>
             <div className="cell">This is an example of much longer description that should truncate</div>
             <div className="cell">
               <div className="chip-container">

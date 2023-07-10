@@ -49,7 +49,7 @@ const ExpenseDrawer = () => {
                         </div>
                         <div className="input-group compact w-full">
                             <label>Description</label>
-                            <textarea type="text" className="w-full" placeholder="Enter a description if required." rows="5"></textarea>
+                            <textarea className="w-full" placeholder="Enter a description if required." rows={5}></textarea>
                         </div>
                     </form>
 

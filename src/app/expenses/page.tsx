@@ -11,7 +11,7 @@ export default function page() {
         <div className="ml-auto hidden sm:flex">
           <div className="btn-group">
             <button className="btn btn-secondary">Options</button>
-            <button className="btn btn-primary ">New Expense</button>
+            <button className="btn btn-primary">New Expense</button>
           </div>
         </div>
       </div> 
@@ -36,7 +36,7 @@ export default function page() {
           <div className="data-table-row">
             <div className="cell"><input type="checkbox" /></div>
             <div className="cell">18/05/2022</div>
-            <div className="cell">Terry's Tiles</div>
+            <div className="cell">Terry s Tiles</div>
             <div className="cell">This is an example of a description</div>
             <div className="cell">
               <div className="chip-container"><div className="chip">Marketing & Advertising</div></div>
@@ -87,7 +87,7 @@ export default function page() {
           <div className="data-table-row">
             <div className="cell"><input type="checkbox" /></div>
             <div className="cell">18/05/2022</div>
-            <div className="cell">Terry's Tiles</div>
+            <div className="cell">Terrys Tiles</div>
             <div className="cell">This is an example of much longer description that should truncate</div>
             <div className="cell">
               <div className="chip-container">

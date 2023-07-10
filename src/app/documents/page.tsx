@@ -58,7 +58,6 @@ export default function page() {
                   <div className="font-xs text-colbert-500">2.04MB</div>
                 </div>
               </div>
-
             </div>
             <div className="cell">23/05/2023</div>
             <div className="cell">
@@ -78,7 +77,7 @@ export default function page() {
               <div className="flex flex-col gap-y-2">
                 {/* Associatated with Income */}
                 <div className="association">
-                  <span className="font-medium">Income:</span><span className="text-lavender-600 hover:cursor-pointer hover:underline ml-1.5">Online Sales</span>
+                  <span className="font-medium">Income:</span><span className="text-lavender-600 hover:cursor-pointer hover:underline ml-">Online Sales</span>
                 </div>
                 {/* Associatated with Expense */}
                 <div className="association">
