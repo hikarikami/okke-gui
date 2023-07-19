@@ -167,18 +167,18 @@ a negative margin if required to bring them to the edge.
 
 
 /** Inventory table **/
-@media (min-width: 1201px) {
+
   .data-table.inventory .data-table-header,
   .data-table.inventory .data-table-row {
-    grid-template-columns: 16px auto 200px 140px 140px 18px 34px;
-  }
+    grid-template-columns: 16px auto 164px 148px 48px 34px;
 }
+
 
 /** Customer table **/
 @media (min-width: 1201px) {
   .data-table.customers .data-table-header,
   .data-table.customers .data-table-row {
-    grid-template-columns: 16px 330px 200px 200px auto 34px;
+    grid-template-columns: 16px 360px 180px 180px auto 34px;
   }
 }
 
@@ -234,20 +234,6 @@ a negative margin if required to bring them to the edge.
   @apply justify-end;
 }
 
-
-/***********************************
-*
-*   Inventory Table:
-*   Column specific using nth child
-*  
-************************************/
-
-.data-table.inventory .data-table-row .cell:nth-of-type(4),
-.data-table.inventory .data-table-header div:nth-of-type(4), 
-.data-table.inventory .data-table-row .cell:nth-of-type(5),
-.data-table.inventory .data-table-header div:nth-of-type(5) {
-  @apply justify-end;
-}
 
 
 /***********************************
@@ -315,21 +301,24 @@ a negative margin if required to bring them to the edge.
   @apply flex flex-row gap-1;
 }
 
-.chip-container.chips-lg {
-  @apply gap-2;
-}
 
 .chip-container .chip {
-  @apply w-auto whitespace-nowrap rounded-full bg-indigo-50 px-2 text-xs text-indigo-700;
+  @apply flex justify-center items-center w-auto whitespace-nowrap rounded-full bg-indigo-50  text-indigo-700 px-2 h-[22px] text-xs;
 }
 
-.chip-container.chips-lg .chip {
-  @apply px-3 py-1 text-sm;
-}
 
 .chip-container.chips-sm .chip {
-  @apply px-2 py-0 text-xs;
+  @apply h-[22px] text-xs;
 }
+
+.chip-container.chips-lg .chip{
+  @apply h-[24px] text-sm px-3;
+}
+
+.chip-container.chips-xl .chip{
+  @apply h-[26px] text-sm px-4;
+}
+
 
 
 .chip-container .chip + .chip {

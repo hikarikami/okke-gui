@@ -3,23 +3,23 @@ import { useEffect, useState } from 'react';
 const data = [
     {
         date: "19/07/2023",
-        supplier: "ABC Plumbing Inc.",
-        description: "Purchased a large range of quality plumbing goods, as well as a variety of well-priced services from Mr. ABC himself.",
-        account: "Marketing & Advertising",
-        receiptTotal: "$103,250.00",
+        supplier: "Laura Whitman",
+        description: "Invoice Payment: INV-20332",
+        account: "Online Sales",
+        receiptTotal: "$4,250.00",
         status: ["attached", "banked", "manual"]
     },
     {
         date: "19/07/2023",
-        supplier: "Terry's Terrific Terrariums, Tiles, Toasters & More",
-        description: "Some tiles for my shop.",
-        account: "General Expense",
-        receiptTotal: "$97.95",
+        supplier: "Greg McGreg",
+        description: "Invoice Payment: INV-20331",
+        account: "Online Sales",
+        receiptTotal: "$500.00",
         status: ["attached", "banked", "manual"]
     },
 ];
 
-function ExpenseTable() {
+function IncomeTable() {
     const [isMobileView, setIsMobileView] = useState(false);
 
     useEffect(() => {
@@ -71,7 +71,7 @@ function ExpenseTable() {
                     <div className="data-table-header">
                         <div className="cell"><input type="checkbox" /></div>
                         <div className="cell">Date</div>
-                        <div className="cell">Supplier</div>
+                        <div className="cell">Customer</div>
                         <div className="cell">Description</div>
                         <div className="cell">Account</div>
                         <div className="cell !justify-end !text-right">Receipt total</div>
@@ -89,6 +89,7 @@ function ExpenseTable() {
                                 <div className="chip-container"><div className="chip">{item.account}</div></div>
                             </div>
                             <div className="cell gap-x-2 !justify-end !text-right">
+                               
                                 <div>{item.receiptTotal}</div>
                             </div>
                             <div className="cell status">
@@ -118,7 +119,7 @@ function ExpenseTable() {
     );
 }
 
-export default ExpenseTable;
+export default IncomeTable;
 
 
 

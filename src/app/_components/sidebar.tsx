@@ -25,6 +25,7 @@ const Sidebar = () => {
                 {/* Nav Links  */}
                 <div className="w-full flex flex-col gap-y-1.5 mt-6">
                 <Navlinks href="/expenses" label="Expenses" />
+                <Navlinks href="/income" label="Income" />
                 <Navlinks href="/documents" label="Documents" />
                 <Navlinks href="/customers" label="Customers" />
                 <Navlinks href="/inventory" label="Inventory" />
