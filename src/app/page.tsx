@@ -1,27 +1,42 @@
+/*
+ * 
+ * Test Page / Homepage
+ * 
+ */
 
 import Link from 'next/link'
+import Button from '../app/_components/button'
 
 
 export default function Page() {
   return (
-
     <>
-    
-
-      <h1 className="text-3xl text-colbert-900">Home Page</h1>
-     <p>This is the homepage page</p>
-     <Link href="/test">Go to Test page</Link>
-
-
-
-
-
-
-     
-
-
-
-
+      <h1 className="text-3xl text-colbert-900 mt-16">Home Page</h1>
+      <p>This is the homepage page</p>
+      <Link href="/test">Go to Test page</Link>
+      <div className="flex flex-col gap-y-4 mt-4">
+        <div className="flex gap-x-2">
+          <Button label="Test" size="lg" buttonType="tertiary" modifier="non-colour" />
+          <Button label="Test" size="lg" buttonType="tertiary" modifier="non-colour" />
+          <Button label="Test" size="lg" buttonType="secondary" />
+          <Button label="Test" size="lg" buttonType="primary" />
+          <Button label="Test" size="lg" buttonType="call-to-action" />
+        </div>
+        <div className="flex gap-x-2">
+          <Button label="Test" size="md" buttonType="tertiary" modifier="non-colour" />
+          <Button label="Test" size="md" buttonType="tertiary" modifier="non-colour" />
+          <Button label="Test" size="md" buttonType="secondary" />
+          <Button label="Test" size="md" buttonType="primary" />
+          <Button label="Test" size="md" buttonType="call-to-action" />
+        </div>
+        <div className="flex gap-x-2">
+          <Button label="Test" size="sm" buttonType="tertiary" modifier="non-colour" />
+          <Button label="Test" size="sm" buttonType="secondary" />
+          <Button label="Test" size="sm" buttonType="primary" />
+          <Button label="Test" size="sm" buttonType="call-to-action" />
+        </div>
+        
+      </div>
 
       <div className="floating-action">
         <button>

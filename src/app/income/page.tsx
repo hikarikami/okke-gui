@@ -1,4 +1,11 @@
+/*
+ * 
+ * Income Entry List
+ * 
+ */
+
 import Filters from "../_components/filters"
+import PageHeader from "../_components/pageHeader"
 
 
 /** Expenses Page */
@@ -6,17 +13,7 @@ export default function page() {
   return (
 
     <>
-    {/* Page Header - Refactor into component at some point */}
-    <div className="mt-12 flex w-full items-center border-b border-colbert-300 py-4">
-        <h1 className="text-2xl">Income</h1>
-        <div className="ml-auto hidden sm:flex">
-          <div className="btn-group">
-            <button className="btn btn-secondary">Options</button>
-            <button className="btn btn-primary ">New Expense</button>
-          </div>
-        </div>
-      </div> 
-
+      <PageHeader title="Income" />
       <div className="w-full">
         <Filters />
       </div>

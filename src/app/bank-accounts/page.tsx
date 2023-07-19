@@ -1,21 +1,17 @@
-import Filters from "../_components/filters"
+/*
+ * 
+ * Bank Accounts
+ * 
+ */
 
-// Bank Accounts
+import Filters from "../_components/filters"
+import PageHeader from "../_components/pageHeader"
 
 export default function page() {
   return (
 
     <>
-      {/* Page Header - Refactor into component at some point */}
-      <div className="mt-12 flex w-full items-center border-b border-colbert-300 py-4">
-        <h1 className="text-2xl">Bank Accounts</h1>
-        <div className="ml-auto hidden sm:flex">
-          <div className="btn-group">
-            <button className="btn btn-secondary">Options</button>
-            <button className="btn btn-primary ">New Expense</button>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="Transactions" />
 
       <div className="w-full">
         <Filters />
@@ -43,7 +39,7 @@ export default function page() {
             <div className="cell">
               <input type="checkbox" />
             </div>
-             {/* Bank name + Description */}
+            {/* Bank name + Description */}
             <div className="cell">
               <div className="flex flex-col gap-y-1">
                 <div className="flex flex-row gap-x-1">
@@ -80,7 +76,7 @@ export default function page() {
                 <div className="chip indigo subtle">Active</div>
               </div>
             </div>
-              {/* Action buttons */}
+            {/* Action buttons */}
             <div className="cell">
               <div className="action-buttons">
                 <button className="block sm:hidden">Edit Entry</button>
@@ -93,12 +89,12 @@ export default function page() {
             </div>
           </div>
 
-           {/**************************************
+          {/**************************************
             * Row - Account without feed
             *************************************/}
           <div className="data-table-row">
             <div className="cell">
-                {/* Checkbox */}
+              {/* Checkbox */}
               <input type="checkbox" />
             </div>
             {/* Bank name + Description */}
@@ -125,11 +121,11 @@ export default function page() {
                 </div>
               </div>
             </div>
-             {/* Current Balance */}
+            {/* Current Balance */}
             <div className="cell">
               200.00
             </div>
-             {/* Status */}
+            {/* Status */}
             <div className="cell">
               <div className="chip-container chips-sm flex-wrap mt-1">
                 <div className="chip indigo subtle">Active</div>

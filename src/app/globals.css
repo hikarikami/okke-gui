@@ -27,7 +27,7 @@ body {
 }
 
 body {
-  @apply flex min-h-screen w-full justify-center bg-default-bg md:items-start relative;
+  @apply flex min-h-screen w-full justify-center bg-default-bg md:items-start relative text-colbert-900;
 }
 
 /** Hide body overflow when drawer-container is visible**/
@@ -96,24 +96,33 @@ ul label.card-list {
 *  
 ************************************/
 
+/*
+Table header is hidden, then visible on md+
+Rows are full width, then resort to css grid template for md+
+
+Tables exist as their own item, so if in a card with padding, pass through
+a negative margin if required to bring them to the edge.
+*/
+
 .data-table {
-  @apply flex w-full flex-col items-start;
+  @apply flex w-full flex-col items-start ;
 }
 
 .data-table .cell {
   @apply flex items-center justify-start;
 }
 
+
 .data-table .data-table-header {
-  @apply hidden border-b border-colbert-200 px-6 pb-2 pt-6 text-xs font-semibold;
+  @apply hidden md:flex border-b border-colbert-200 px-6 pb-2 pt-6 text-xs font-semibold;
 }
 
 .data-table .data-table-row {
-  @apply w-full border-b border-colbert-200 px-6 py-4 text-sm font-light hover:bg-zinc-50 hover:cursor-pointer;
+  @apply w-full border-b border-colbert-200 px-6 py-6 md:py-4 text-sm  hover:bg-zinc-50 hover:cursor-pointer;
 }
 .data-table .data-table-header,
 .data-table .data-table-row {
-  @apply relative grid gap-x-5 gap-y-2;
+  @apply relative grid gap-x-0 gap-y-1 md:gap-x-5 md:gap-y-0;
 }
 
 .data-table .data-table-header {
@@ -195,6 +204,7 @@ ul label.card-list {
 
 
 
+
 /***********************************
 *
 *   Expenses Table:
@@ -206,42 +216,34 @@ ul label.card-list {
 /** checkbox **/
 .data-table.expenses .data-table-row .cell:nth-of-type(1),
 .data-table.expenses .data-table-header div:nth-of-type(1) {
-  @apply order-1;
-}
-
-@media (max-width: 1201px) {
-  .data-table.expenses .data-table-row .cell:nth-of-type(1),
-  .data-table.expenses .data-table-header div:nth-of-type(1) {
-    display: none;
-  }
+  @apply order-1 md:order-1 hidden md:flex;
 }
 
 /** date **/
 .data-table.expenses .data-table-row .cell:nth-of-type(2),
 .data-table.expenses .data-table-header div:nth-of-type(2) {
-  @apply order-3 text-colbert-500 sm:order-2 sm:text-colbert-900;
+  @apply order-3 md:order-3 text-colbert-500 md:order-2 md:text-colbert-900;
 }
 
-/** supplier **/
+/** supplier/customer **/
 .data-table.expenses .data-table-row .cell:nth-of-type(3),
 .data-table.expenses .data-table-header div:nth-of-type(3) {
-  @apply order-2 -mb-1.5 text-lg font-medium sm:font-normal sm:order-3 sm:text-sm sm:m-0;
+  @apply order-1 md:order-3 text-base font-medium block truncate self-center md:text-sm md:font-normal sm:m-0;
 }
 
 /** override the table header **/
 .data-table.expenses .data-table-header div:nth-of-type(3) {
-  @apply sm:text-xs sm:mb-0 sm:font-semibold;
+  @apply sm:text-xs md:mb-0 sm:font-semibold;
 }
-
 
 
 /** description **/
 .data-table.expenses .data-table-row .cell:nth-of-type(4),
 .data-table.expenses .data-table-header div:nth-of-type(4) {
-  @apply order-4 block self-center truncate;
+  @apply order-4 line-clamp-2 md:line-clamp-1 md:block md:truncate md:self-center;
 }
 
-/** description **/
+/** account **/
 .data-table.expenses .data-table-row .cell:nth-of-type(5),
 .data-table.expenses .data-table-header div:nth-of-type(5) {
   @apply order-5 truncate;
@@ -250,31 +252,16 @@ ul label.card-list {
 /** receipt total **/
 .data-table.expenses .data-table-row .cell:nth-of-type(6),
 .data-table.expenses .data-table-header div:nth-of-type(6) {
-  @apply order-6 justify-end text-right;
+  @apply order-2 md:order-6 text-base md:text-sm font-medium md:font-normal justify-end text-right ;
 }
 
-@media (max-width: 1200px) {
-  .data-table.expenses .data-table-row .cell:nth-of-type(6),
-  .data-table.expenses .data-table-header div:nth-of-type(6) {
-    @apply order-7 text-2xl font-semibold;
-  }
-}
 
-/** icons **/
+/** Status icons **/
 .data-table.expenses .data-table-row .cell:nth-of-type(7),
 .data-table.expenses .data-table-header div:nth-of-type(7) {
-  @apply order-1 truncate sm:relative  sm:order-8;
+  @apply hidden md:flex order-1 truncate sm:relative  sm:order-8;
 }
 
-.data-table.expenses .cell.status svg {
- @apply w-4.5;
-}
-
-@media (max-width: 1200px) {
-  .data-table.expenses .data-table-row .cell:nth-of-type(7) svg {
-    @apply absolute right-36 top-5 h-6 w-6;
-  }
-}
 
 /** action **/
 .data-table .data-table-row .cell:nth-of-type(8),
@@ -428,7 +415,7 @@ ul label.card-list {
   @apply flex flex-row gap-x-2;
 }
 .action-buttons button {
-  @apply relative rounded border border-colbert-400 bg-white p-1.5 shadow-sm hover:border-colbert-500;
+  @apply flex relative items-center rounded border border-colbert-400 bg-white p-1.5 shadow-sm hover:border-colbert-500;
 }
 
 .action-buttons button:hover:after {
@@ -437,9 +424,7 @@ ul label.card-list {
 
 @media (max-width: 1200px) {
   .cell:has(.action-buttons) {
-    position: absolute;
-    right: 16px;
-    top: 16px;
+    @apply absolute bottom-4 right-4;
   }
 }
 
@@ -453,9 +438,6 @@ ul label.card-list {
 *  
 ************************************/
 
-.btn {
-  @apply inline-flex items-center justify-center self-center whitespace-nowrap rounded px-4 py-2  text-sm;
-}
 
 .btn svg {
   @apply mr-1 inline-block w-4;
@@ -467,22 +449,6 @@ ul label.card-list {
 
 .btn-group .btn {
   @apply w-full sm:w-auto;
-}
-
-.btn-secondary {
-  @apply border border-colbert-300 text-colbert-900 shadow-sm  hover:bg-lavender-50 hover:text-lavender-700 bg-white;
-}
-
-.btn-secondary.colour {
-  @apply border-lavender-400 text-lavender-600;
-}
-
-.btn-tertiary {
-  @apply text-lavender-500 hover:bg-lavender-50 hover:text-lavender-700;
-}
-
-.btn-primary {
-  @apply bg-lavender-500 text-white hover:bg-lavender-400;
 }
 
 .btn.btn-sm {
@@ -510,6 +476,8 @@ ul label.card-list {
 .floating-action {
   @apply fixed bottom-6 right-6;
 }
+
+
 .floating-action button {
   @apply flex  h-16 w-16 items-center justify-center rounded-full bg-lavender-500 align-middle text-3xl text-white shadow-lg transition-all  duration-500 ease-in-out focus:bg-lavender-400 sm:hidden;
 }

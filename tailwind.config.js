@@ -28,7 +28,7 @@ module.exports = {
         md: '1200px',         // tablet 
         lg: '1200px',       // laptop
         xl: '1200px',       // desktop
-        '2xl': '1200px',    // ultrawide
+        '2xl': '1300px',    // ultrawide
       },
     },
     fontSize: {
@@ -187,7 +187,7 @@ module.exports = {
         '99pc': '99%',
       },
       height: {
-        '75vh': '75vh'
+        '75vh': '75vh',
       },
       zIndex: {
         '-1': '-1',

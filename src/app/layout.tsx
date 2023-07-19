@@ -7,6 +7,7 @@ import Lightbox from './_components/lightbox';
 
 import './globals.css'
 import { Inter } from 'next/font/google';
+import 'material-icons/iconfont/material-icons.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
