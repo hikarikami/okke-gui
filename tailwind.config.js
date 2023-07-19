@@ -25,10 +25,10 @@ module.exports = {
       },
       screens: {
         sm: '100%',         // mobile
-        md: '1200px',         // tablet 
-        lg: '1200px',       // laptop
-        xl: '1200px',       // desktop
-        '2xl': '1300px',    // ultrawide
+        md: '1176px',         // tablet 
+        lg: '1176px',       // laptop
+        xl: '1176px',       // desktop
+        '2xl': '1176px',    // ultrawide
       },
     },
     fontSize: {

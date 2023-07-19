@@ -105,7 +105,7 @@ a negative margin if required to bring them to the edge.
 
 
 .data-table .data-table-header {
-  @apply hidden md:flex border-b border-colbert-200 px-6 pb-2 pt-6 text-xs font-semibold;
+  @apply hidden md:flex border-b border-colbert-300 px-6 pb-2 pt-6 text-xs font-semibold;
 }
 
 .data-table .data-table-row {
@@ -135,10 +135,17 @@ a negative margin if required to bring them to the edge.
 
 
 /** expenses table **/
-@media (min-width: 1201px) {
+
   .data-table.expenses .data-table-header,
   .data-table.expenses .data-table-row {
-    grid-template-columns: 16px 94px 124px 300px 210px auto 54px 34px;
+    grid-template-columns: 16px 104px 172px 262px 220px auto 54px 34px;
+  }
+
+
+@media (min-width: 1920px) {
+  .data-table.expenses .data-table-header,
+  .data-table.expenses .data-table-row {
+    grid-template-columns: 16px 104px 172px 262px 220px auto 54px 34px;
   }
 }
 
@@ -205,60 +212,13 @@ a negative margin if required to bring them to the edge.
 
 
 /** checkbox **/
-.data-table.expenses .data-table-row .cell:nth-of-type(1),
-.data-table.expenses .data-table-header div:nth-of-type(1) {
-  @apply order-1 md:order-1 hidden md:flex;
-}
-
-/** date **/
-.data-table.expenses .data-table-row .cell:nth-of-type(2),
-.data-table.expenses .data-table-header div:nth-of-type(2) {
-  @apply order-3 md:order-3 text-colbert-500 md:order-2 md:text-colbert-900;
-}
-
-/** supplier/customer **/
-.data-table.expenses .data-table-row .cell:nth-of-type(3),
-.data-table.expenses .data-table-header div:nth-of-type(3) {
-  @apply order-1 md:order-3 text-base font-medium block truncate self-center md:text-sm md:font-normal sm:m-0;
-}
-
-/** override the table header **/
-.data-table.expenses .data-table-header div:nth-of-type(3) {
-  @apply sm:text-xs md:mb-0 sm:font-semibold;
-}
 
 
-/** description **/
-.data-table.expenses .data-table-row .cell:nth-of-type(4),
-.data-table.expenses .data-table-header div:nth-of-type(4) {
-  @apply order-4 line-clamp-2 md:line-clamp-1 md:block md:truncate md:self-center;
-}
-
-/** account **/
-.data-table.expenses .data-table-row .cell:nth-of-type(5),
-.data-table.expenses .data-table-header div:nth-of-type(5) {
-  @apply order-5 truncate;
-}
-
-/** receipt total **/
-.data-table.expenses .data-table-row .cell:nth-of-type(6),
-.data-table.expenses .data-table-header div:nth-of-type(6) {
-  @apply order-2 md:order-6 text-base md:text-sm font-medium md:font-normal justify-end text-right ;
-}
 
 
-/** Status icons **/
-.data-table.expenses .data-table-row .cell:nth-of-type(7),
-.data-table.expenses .data-table-header div:nth-of-type(7) {
-  @apply hidden md:flex order-1 truncate sm:relative  sm:order-8;
-}
 
 
-/** action **/
-.data-table .data-table-row .cell:nth-of-type(8),
-.data-table .data-table-header div:nth-of-type(8) {
-  @apply truncate sm:order-9;
-}
+
 
 
 /***********************************
@@ -406,18 +366,17 @@ a negative margin if required to bring them to the edge.
   @apply flex flex-row gap-x-2;
 }
 .action-buttons button {
-  @apply flex relative items-center rounded border border-colbert-400 bg-white p-1.5 shadow-sm hover:border-colbert-500;
+  @apply flex w-[30px] h-[30px] relative justify-center items-center rounded border border-colbert-400 bg-white shadow-sm hover:border-colbert-500;
+}
+
+.action-butons button span {
+  @apply flex;
 }
 
 .action-buttons button:hover:after {
   @apply absolute -left-1/2 -top-10 rounded bg-midnight-800 p-2 text-xs text-white content-["tooltip"];
 }
 
-@media (max-width: 1200px) {
-  .cell:has(.action-buttons) {
-    @apply absolute bottom-4 right-4;
-  }
-}
 
 
 /***********************************
