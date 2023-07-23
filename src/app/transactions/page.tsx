@@ -8,7 +8,6 @@
 import Filters from "../_components/filters"
 import PageHeader from "../_components/pageHeader"
 import TransactionsTable from "../_components/tables/transactionsTable"
-import { useEffect, useState } from 'react';
 
 
 
