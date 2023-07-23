@@ -195,7 +195,7 @@ a negative margin if required to bring them to the edge.
 @media (min-width: 1201px) {
   .data-table.bank-accounts .data-table-header,
   .data-table.bank-accounts .data-table-row {
-    grid-template-columns: 16px 440px auto 100px 100px 34px;
+    grid-template-columns: 16px 440px 140px auto 100px 34px;
   }
 }
 
@@ -260,20 +260,6 @@ a negative margin if required to bring them to the edge.
 
 .data-table.transactions .data-table-row .cell:nth-of-type(6),
 .data-table.transactions .data-table-header div.cell:nth-of-type(6) {
-  @apply justify-end;
-}
-
-
-/***********************************
-*
-*   Bank Account:
-*   Column specific using nth child
-*  
-************************************/
-
-/** Balance **/
-.data-table.bank-accounts .data-table-row .cell:nth-of-type(4),
-.data-table.bank-accounts .data-table-header div:nth-of-type(4)  {
   @apply justify-end;
 }
 

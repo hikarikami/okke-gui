@@ -3,19 +3,38 @@
  * Bank Transactions
  * 
  */
+"use client"; // This is a client component 👈🏽
 
 import Filters from "../_components/filters"
 import PageHeader from "../_components/pageHeader"
+import TransactionsTable from "../_components/tables/transactionsTable"
+import { useEffect, useState } from 'react';
 
+
+
+/**
+ * 
+ *    container
+ *      card
+ *        data-table with filter
+ *          filter-component
+            data-table-component
+              data-table-header
+              data-table-body
+              data-table-footer
+ */
 
 export default function page() {
   return (
     <>
-     <PageHeader title="Transactions" />
-      <div className="w-full">
-        <Filters />
+    <PageHeader title="Transactions" />
+    <div className="w-full">
+      <Filters />
+      <div className="-mx-4 md:mx-0 card md:w-full mt-3 rounded-none md:rounded-md">
+        <TransactionsTable />
       </div>
 
+      
       {/* Transaction Table */}
       <div className="card w-full mt-3 mb-24">
         <div className="data-table transactions">
@@ -186,6 +205,8 @@ export default function page() {
           </div>
         </div>
       </div>
-    </>
+    </div>
+  </>
+    
   )
 }
