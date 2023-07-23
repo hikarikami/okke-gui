@@ -3,21 +3,26 @@
  * Invoice List
  * 
  */
+"use client"; // This is a client component 👈🏽
 
 import Filters from "../_components/filters"
 import PageHeader from "../_components/pageHeader"
+import InvoiceTable from "../_components/tables/invoiceTable"
 
 export default function page() {
   return (
 
     <>
-      <PageHeader title="Invoices" />
+           <PageHeader title="Income" />
       <div className="w-full">
         <Filters />
+        <div className="-mx-4 md:mx-0 card md:w-full mt-3 rounded-none md:rounded-md">
+          <InvoiceTable />
+        </div>
       </div>
-
+   
       {/* Invoice Table */}
-      <div className="card w-full mt-3 mb-24">
+      <div className="-mx-4 md:mx-0 card md:w-full mt-3 rounded-none md:rounded-md">
         <div className="data-table invoices">
           <div className="data-table-header">
             <div className="cell"><input type="checkbox" /></div>
@@ -57,7 +62,7 @@ export default function page() {
             </div>
             <div className="cell">
               <div className="action-buttons">
-                <button className="block sm:hidden">Edit Entry</button>
+               
                 <button>
                   <svg className="w-4.5" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.49996 7.14323C10.3708 7.14323 11.0833 6.43073 11.0833 5.5599C11.0833 4.68906 10.3708 3.97656 9.49996 3.97656C8.62913 3.97656 7.91663 4.68906 7.91663 5.5599C7.91663 6.43073 8.62913 7.14323 9.49996 7.14323ZM9.49996 8.72656C8.62913 8.72656 7.91663 9.43906 7.91663 10.3099C7.91663 11.1807 8.62913 11.8932 9.49996 11.8932C10.3708 11.8932 11.0833 11.1807 11.0833 10.3099C11.0833 9.43906 10.3708 8.72656 9.49996 8.72656ZM9.49996 13.4766C8.62913 13.4766 7.91663 14.1891 7.91663 15.0599C7.91663 15.9307 8.62913 16.6432 9.49996 16.6432C10.3708 16.6432 11.0833 15.9307 11.0833 15.0599C11.0833 14.1891 10.3708 13.4766 9.49996 13.4766Z" fill="#121224" />
@@ -95,7 +100,7 @@ export default function page() {
             </div>
             <div className="cell">
               <div className="action-buttons">
-                <button className="block sm:hidden">Edit Entry</button>
+               
                 <button>
                   <svg className="w-4.5" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.49996 7.14323C10.3708 7.14323 11.0833 6.43073 11.0833 5.5599C11.0833 4.68906 10.3708 3.97656 9.49996 3.97656C8.62913 3.97656 7.91663 4.68906 7.91663 5.5599C7.91663 6.43073 8.62913 7.14323 9.49996 7.14323ZM9.49996 8.72656C8.62913 8.72656 7.91663 9.43906 7.91663 10.3099C7.91663 11.1807 8.62913 11.8932 9.49996 11.8932C10.3708 11.8932 11.0833 11.1807 11.0833 10.3099C11.0833 9.43906 10.3708 8.72656 9.49996 8.72656ZM9.49996 13.4766C8.62913 13.4766 7.91663 14.1891 7.91663 15.0599C7.91663 15.9307 8.62913 16.6432 9.49996 16.6432C10.3708 16.6432 11.0833 15.9307 11.0833 15.0599C11.0833 14.1891 10.3708 13.4766 9.49996 13.4766Z" fill="#121224" />

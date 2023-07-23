@@ -34,7 +34,7 @@ export default function page() {
       <PageHeader title="Customers" />
       <div className="w-full">
         <Filters />
-        <div className="card w-full mt-3">
+        <div className="-mx-4 md:mx-0 mb-8 card md:w-full mt-3 rounded-none md:rounded-md">
           <CustomerTable />
         </div>
       </div>  

@@ -1,23 +1,33 @@
 import { useEffect, useState } from 'react';
+import { faker } from '@faker-js/faker';
 
-const data = [
-    {
-        date: "19/07/2023",
-        supplier: "Laura Whitman",
-        description: "Invoice Payment: INV-20332",
-        account: "Online Sales",
-        receiptTotal: "$4,250.00",
-        status: ["attached", "banked", "manual"]
-    },
-    {
-        date: "19/07/2023",
-        supplier: "Greg McGreg",
-        description: "Invoice Payment: INV-20331",
-        account: "Online Sales",
-        receiptTotal: "$500.00",
-        status: ["attached", "banked", "manual"]
-    },
-];
+
+const generateRandomIncome = (numEntries) => {
+    const income = [];
+
+    for (let i = 1; i <= numEntries; i++) {
+        const date = faker.date.anytime().toLocaleDateString();
+        const supplier = faker.company.name();
+        const description = faker.commerce.productDescription();
+        const account = Math.random() < 0.5 ? 'Online Sales' : 'Interest Received';
+        const receiptTotal = `$${(Math.random() * 5000).toFixed(2)}`;
+        const status = ["attached"];
+
+        income.push({
+            date,
+            supplier,
+            description,
+            account,
+            receiptTotal,
+            status,
+        });
+    }
+
+    return income;
+};
+
+const data = generateRandomIncome(5);
+
 
 function IncomeTable() {
     const [isMobileView, setIsMobileView] = useState(false);
@@ -41,15 +51,15 @@ function IncomeTable() {
                 <div className="data-table">
                     {data.map((item, index) => (
                         <div className="data-table-row" key={index}>
-                            <div className="flex flex-row gap-x-2 text-base text-medium">
+                            <div className="flex flex-row gap-x-2 text-sm text-medium">
                                 <div className="w-full truncate">{item.supplier}</div>
                                 <div className="flex flex-row gap-x-1">
                                     <div className="flex shrink"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>account_balance</span></div>
                                     <div className="font-semibold">{item.receiptTotal}</div>
                                 </div>
                             </div>
-                            <div className="text-sm text-colbert-500">18/05/2022</div>
-                            <div className="text-sm leading-6 line-clamp-2 ">{item.description}</div>
+                            <div className="text-xs text-colbert-500">{item.date}</div>
+                            <div className="text-xs leading-6 line-clamp-2 ">{item.description}</div>
                             <div className="cell">
                                 <div className="chip-container chips-lg mt-4"><div className="chip">{item.account}</div></div>
                             </div>
@@ -89,7 +99,7 @@ function IncomeTable() {
                                 <div className="chip-container"><div className="chip">{item.account}</div></div>
                             </div>
                             <div className="cell gap-x-2 !justify-end !text-right">
-                               
+
                                 <div>{item.receiptTotal}</div>
                             </div>
                             <div className="cell status">

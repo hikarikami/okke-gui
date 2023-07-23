@@ -76,7 +76,7 @@ ul label.card-list {
 
 /** card  & Data table **/
 .card {
-  @apply relative self-start rounded-md border border-colbert-300 bg-white shadow-sm;
+  @apply relative self-start border border-colbert-300 bg-white shadow-sm;
 }
 
 /***********************************
@@ -109,7 +109,7 @@ a negative margin if required to bring them to the edge.
 }
 
 .data-table .data-table-row {
-  @apply w-full border-b border-colbert-200 px-6 py-6 md:py-4 text-sm  hover:bg-zinc-50 hover:cursor-pointer;
+  @apply w-full border-b border-colbert-200 px-4 md:px-6 py-4 text-sm  hover:bg-zinc-50 hover:cursor-pointer;
 }
 .data-table .data-table-header,
 .data-table .data-table-row {
@@ -201,17 +201,6 @@ a negative margin if required to bring them to the edge.
 
 
 
-
-
-/***********************************
-*
-*   Expenses Table:
-*   Column specific using nth child
-*  
-************************************/
-
-
-/** checkbox **/
 
 
 

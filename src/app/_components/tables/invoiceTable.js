@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { faker } from '@faker-js/faker';
 
 
-const generateRandomItems = (numItems) => {
+const generateRandomItems = (numCustomers) => {
     const income = [];
 
-    for (let i = 1; i <= numItems; i++) {
+    for (let i = 1; i <= numCustomers; i++) {
         const code =  faker.commerce.product() + "-" + faker.commerce.productMaterial() + "-" + faker.string.alpha(2);
         const supplier = faker.company.name();
         const description = faker.commerce.productDescription();
@@ -68,7 +68,7 @@ function InventoryTable() {
         } else {
             // Render Desktop Table
             return (
-                <div className="data-table inventory">
+                <div className="data-table invoices">
                     <div className="data-table-header">
                         <div className="cell"><input type="checkbox" /></div>
                         <div className="cell">Item</div>

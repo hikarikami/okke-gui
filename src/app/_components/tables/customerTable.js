@@ -1,27 +1,37 @@
 import { useEffect, useState } from 'react';
+import { faker } from '@faker-js/faker';
 
-const data = [
-    {
-        id: "LAU001",
-        type: "PERS",
-        businessName: "",
-        customerName: "Laura Whitman But Even Longer Than Usual",
-        phoneNumber: "0404822085",
-        email: "laura.whiteman@gmail.com",
-        totalOutstanding: "$4,250.00",
-        status: ["active"]
-    },
-    {
-        id: "BUS001",
-        itemType: "BUS",
-        businessName: "The Really, Really, Really Long Name Company",
-        customerName: "Henry",
-        phoneNumber: "0404822085",
-        email: "henry@longcompanyname.com",
-        totalOutstanding: "$144,001.20",
-        status: ["active"]
+
+const generateRandomCustomers = (numCustomers) => {
+    const customers = [];
+
+    for (let i = 1; i <= numCustomers; i++) {
+        const id = `CUST${i.toString().padStart(3, '0')}`;
+        const type = Math.random() < 0.5 ? 'PERS' : 'BUS';
+        const businessName = type === 'BUS' ? faker.company.name() : '';
+        const customerName = faker.person.firstName() + " " + faker.person.lastName();
+        const phoneNumber = faker.phone.number();
+        const email = faker.internet.email();
+        const totalOutstanding = `$${(Math.random() * 5000).toFixed(2)}`;
+        const status = ["active"];
+
+        customers.push({
+            id,
+            type,
+            businessName,
+            customerName,
+            phoneNumber,
+            email,
+            totalOutstanding,
+            status,
+        });
     }
-];
+
+    return customers;
+};
+
+const data = generateRandomCustomers(5);
+
 
 function CustomerTable() {
     const [isMobileView, setIsMobileView] = useState(false);
@@ -45,20 +55,17 @@ function CustomerTable() {
                 <div className="data-table">
                     {data.map((item, index) => (
                         <div className="data-table-row" key={index}>
-                            <div className="flex flex-row gap-x-2 text-base text-medium">
+                            <div className="flex flex-row gap-x-2 text-sn text-medium">
                                 <div className="flex flex-row gap-x-1  w-full truncate">
                                     <div className="flex">
-                                    {/* icon based on type */}
-                                    {item.type == 'PERS' ? <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>person</span> : <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>business</span> }
+                                        {/* icon based on type */}
+                                        {item.type == 'PERS' ? <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>person</span> : <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>business</span>}
                                     </div>
                                     <div className="w-full truncate">{item.customerName}</div>
                                 </div>
                                 <div className="font-semibold">{item.totalOutstanding}</div>
                             </div>
-                            <div className="text-sm text-colbert-500">{item.email}</div>
-                            <div className="text-sm leading-6 line-clamp-2 ">{item.description}</div>
-
-
+                            <div className="text-xs text-colbert-500">{item.email}</div>
                         </div>
                     ))}
                 </div>
@@ -79,10 +86,11 @@ function CustomerTable() {
                     {data.map((item, index) => (
                         <div className="data-table-row" key={index}>
                             <div className="cell"><input type="checkbox" /></div>
+                              {/* Customer Details to */}
                             <div className="cell flex-col gap-y-0.5 !items-start">
-                                <div className="font-medium flex items-center gap-x-1"> 
-                                {item.type == 'PERS' ? <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>person</span> : <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>business</span> }
-                                {item.customerName}
+                                <div className="font-medium flex items-center gap-x-1">
+                                    {item.type == 'PERS' ? <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>person</span> : <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>business</span>}
+                                    {item.type == 'PERS' ? <span>{item.customerName}</span> : <span>{item.businessName}</span>}
                                 </div>
                                 <div>
                                     <div className="text-xs text-colbert-500">{item.email}</div>
@@ -93,6 +101,7 @@ function CustomerTable() {
                             <div className="cell !justify-end !text-right">
                                 <div>{item.totalOutstanding}</div>
                             </div>
+                              {/* Action Menu to */}
                             <div className="cell">
                                 <div className="action-buttons absolute right-4">
                                     <button>

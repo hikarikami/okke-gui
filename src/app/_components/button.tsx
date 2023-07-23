@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
     const getButtonClasses = (): string => {
-        let baseClasses = ' inline-flex items-center justify-center self-center whitespace-nowrap rounded';
+        let baseClasses = ' btn inline-flex items-center justify-center self-center whitespace-nowrap rounded';
 
         switch (buttonType) {
             case 'primary':
