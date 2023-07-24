@@ -26,6 +26,9 @@ body:has( > .drawer-container) {
  overflow: hidden;
 }
 
+a {
+  @apply hover:cursor-pointer text-lavender-500 underline hover:text-lavender-700;
+}
 
 .drawer {
   @apply sm:max-h-full sm:min-h-full w-full overflow-auto bg-white px-6 shadow-lg;
@@ -74,9 +77,28 @@ ul label.card-list {
   @apply hover:border-colbert-400;
 }
 
+
 /** card  & Data table **/
 .card {
   @apply relative self-start border border-colbert-300 bg-white shadow-sm;
+}
+
+.login-bg {
+  background-image: url('/login-bg.png');
+  background-repeat: no-repeat;
+  background-position:  60% 33%;
+  background-size: 110%;
+}
+
+/***********************************
+***  Link group
+***********************************/
+
+.link-group a {
+  @apply relative text-sm hover:underline;
+}
+.link-group a:not(:last-of-type):after {
+  @apply content-[""] absolute -right-4 w-0.5 h-full bg-colbert-100;
 }
 
 /***********************************
@@ -448,7 +470,7 @@ label {
 }
 
 
-input[type="text"],
+input[type="text"], input[type="password"],
 select,
 textarea {
   @apply mt-1 appearance-none rounded border border-colbert-300 px-3 py-2.5 shadow-sm;
@@ -462,6 +484,7 @@ select + svg {
 }
 
 .input-group.compact input[type="text"],
+.input-group.compact input[type="password"]
 .input-group.compact select,
 .input-group.compact textarea {
   @apply px-2.5 py-1.5;
@@ -548,4 +571,11 @@ input[type="radio"] + .radio-check:after {
 
 .expense-summary table tfoot tr td {
   @apply text-base font-semibold;
+}
+
+.password-checker {
+  @apply hidden;
+}
+input[type="password"]:focus + .password-checker {
+ @apply flex;
 }

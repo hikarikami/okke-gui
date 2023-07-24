@@ -5,7 +5,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-    theme: {
+  theme: {
     boxShadow: {
       sm: '0px 2px 4px 0px rgba(60,70,77,0.05)',
       DEFAULT: '0px 3px 8px 0px rgba(60,70,77,0.07), 0px 2px 4px 0px rgba(60,70,77,0.05)',
@@ -160,19 +160,7 @@ module.exports = {
       fontSize: {
         xxs: ['0.63rem', { lineHeight: '1rem' }],
       },
-      spacing: {
-        4.5: '1.125rem',
-        5.5: '1.375rem',
-        15: '3.75rem',
-        18: '4.5rem',
-        21: '5.25rem',
-        50: '12.5rem',
-        62: '15.5rem',
-        66: '16.5rem',
-        74: '18.5rem',
-        112: '28rem',
-        128: '32rem'
-      },
+      spacing: { 4.5: '1.125rem', 5.5: '1.375rem', 15: '3.75rem', 18: '4.5rem', 20.5: '5.125rem', 21: '5.25rem', 22.5: '5.625rem', 38: '9.5rem', 50: '12.5rem', 56: '14rem', 62: '15.5rem', 66: '16.5rem', 74: '18.5rem', 78: '19.5rem', 96: '24rem', 100: '25rem', 104: '26rem', 108: '27rem', 110: '27.5rem', 112: '28rem', 128: '32rem', 136: '34rem', },
       transformOrigin: {
         0: '0%',
       },
