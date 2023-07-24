@@ -83,12 +83,13 @@ ul label.card-list {
   @apply relative self-start border border-colbert-300 bg-white shadow-sm;
 }
 
-.login-bg {
-  background-image: url('/login-bg.png');
+.signup-bg {
+  background-image: url('/signin-bg.png');
   background-repeat: no-repeat;
   background-position:  60% 33%;
   background-size: 110%;
 }
+
 
 /***********************************
 ***  Link group

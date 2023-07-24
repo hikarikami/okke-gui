@@ -46,7 +46,7 @@ export default function RootshowLayout({
             )
           }  else if(showLayout == "2") {
             return (
-              <body className={`${inter.className} ' m-0 p-0 bg-white min-h-screen flex flex-row'`}>
+              <body className={`${inter.className} ' md:m-0 md:p-0 bg-white justify-start md:min-h-screen flex flex-col md:flex-row`}>
                  {children}
                 </body>
             )

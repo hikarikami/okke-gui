@@ -18,12 +18,9 @@ export default function page() {
     return (
         <>
             <div class="w-12/12 md:w-8/12 lg:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
-                {/* <svg className="absolute rotate-180 bottom-0 -left-96 w-[800px] -z-1 opacity-75" viewBox="0 0 1156 956" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.8926 1.5283C258.03 231.134 311.595 471.527 191.905 529.563C72.2146 587.599 -44.2865 427.787 19.4089 365.722C83.1043 303.658 244.409 259.572 357.588 538.54C503.091 897.179 695.644 1098.14 1155.22 833.337" stroke="#1B0A32" stroke-width="2" stroke-dasharray="8 12" />
-                </svg> */}
-                <div class="w-full md:w-110 pt-10 md:pt-12 h-full flex flex-col">
 
-                    <svg className="w-24 md:w-28" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="w-full md:w-100 pt-12 h-full flex flex-col">
+                    <svg className="w-28" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_805_83945)">
                             <path d="M18.3997 14.2671C28.8666 14.2671 36.7998 22.0003 36.7998 32.1335C36.7998 42.2671 28.8666 50.0003 18.3997 50.0003C7.93316 50.0003 0 42.2671 0 32.1335C0 22.0003 7.93316 14.2671 18.3997 14.2671ZM18.3997 41.8003C23.5999 41.8003 27.4663 37.667 27.4663 32.1335C27.4663 26.6669 23.5999 22.5336 18.3997 22.5336C13.2664 22.5336 9.33309 26.6669 9.33309 32.1335C9.33309 37.667 13.2664 41.8003 18.3997 41.8003Z" fill="#1B0A32" />
                             <path d="M74.0424 49.3333H62.665L52.3586 36.1491L48.0086 40.9008V49.3333H38.9736V0H48.0086V28.8541L60.3896 14.7999H71.7667L58.5157 29.3898L74.0424 49.3333Z" fill="#1B0A32" />
@@ -37,57 +34,51 @@ export default function page() {
                             </clipPath>
                         </defs>
                     </svg>
-                    <h1 className="text-lg md:text-2xl font-medium mt-6">Welcome back.</h1>
-                    <p className="text-sm md:text-base mt-2 md:mt-6">Great to see you again! Sign in with your email so we can get back into action. </p>
+                    <h1 className="text-lg md:text-2xl font-medium mt-6">Get started today for free, no credit card required.</h1>
+                    <p className="text-sm md:text-base mt-2 md:mt-6">Sign up and start growing your business.</p>
                     <form className="mt-6 flex flex-col gap-y-5">
                         <div className="input-group  w-full">
-                            <label>Email</label>
+                            <label>Full Name</label>
                             <input type="text" className="w-full" placeholder="" />
                         </div>
                         <div className="input-group  w-full">
-                            <label>Password</label>
+                            <label>Email Address</label>
                             <input type="text" className="w-full" placeholder="" />
                         </div>
-
+                        <div className="input-group  w-full">
+                            <label>Strong Password</label>
+                            <input type="password" className="w-full" placeholder="" />
+                            <div className="password-checker mt-4 text-sm text-colbert-500 p-4 border border-colbert-200 rounded shadow-sm bg-white">
+                                <ul className="flex flex-col gap-y-1 w-full items-start">
+                                    <li className="flex flex-row justify-center gap-x-1 text-emerald-500"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>Minimum of 12 Characters</span></li>
+                                    <li className="flex flex-row justify-center gap-x-1"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>Minimum of 12 Characters</span></li>
+                                    <li className="flex flex-row justify-center gap-x-1"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>At least 1 Number</span></li>
+                                    <li className="flex flex-row justify-center gap-x-1"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>Minimum of 12 Characters</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </form>
                     <div className="btn-group mt-6 w-full !flex-col">
                         <Button label='Create My Account' buttonType='primary' size='lg' className='!w-full' />
                         <div className="w-full text-center mt-4">Already have an account? <a>Sign in</a></div>
                     </div>
-                    <div className="mt-12 md:mt-24 text-xs text-center">
+                    <div className="mt-24 text-xs text-center">
                         By continuing, you are indicating that you have read and agree to our <a>Terms of Use</a> as well as our <a >Privacy Policy</a>.
 
                     </div>
                 </div>
             </div>
-            <div className="sticky hidden overflow-hidden md:flex flex-col justify-center items-center bg-colbert-100 w-5/12 top-0 right-0 h-full min-h-screen self-stretch">
+            <div className="sticky hidden md:flex items-end align-middle bg-gradient-to-br from-lavender-400 to-tangerine-400 w-4/12 top-0 right-0 h-full min-h-screen self-stretch">
                 {/* <Image
-                    src="/login-bg-2.svg"
-                    width={380}
-                    height={380}
+                    src="/login-bg.png"
+                    width={500}
+                    height={500}
                     alt="Picture of the author"
-                    className="mx-auto  w-10/12 lg:w-7/12 2xl:w-6/12"
+                    className="w-full -mx-24"
                 /> */}
 
-                <Image
-                    src="/login-bg-3.svg"
-                    width={420}
-                    height={400}
-                    alt="Picture"
-                    className="mx-auto w-full"
-                />
-
-                <p className="text-base font-medium text-colbert-600 z-10 px-24 w-full text-center mb-24 mt-12">Spend less time on bookkeeping and more time growing your business.</p>
-                <div className="w-10/12 border rounded flex flex-row justify-start items-center p-4 gap-x-2">
-                    <Image
-                        src="/lightbulb.svg"
-                        width={64}
-                        height={64}
-                        alt="Picture"
-                        className="mx-auto w-12"
-                    />
-                    <p className="italic text-xs">Did you know: Invoices featuring your business logo are on average more than 3x likely to get paid.</p>
-                </div>
+                <div className="absolute top-0 bottom-0 left-0 right-0 signup-bg"></div>
+                <p className="text-lg font-medium text-white z-10 px-24 text-center mb-24">Spend less time on bookkeeping and more time growing your business.</p>
             </div>
         </>
     )
