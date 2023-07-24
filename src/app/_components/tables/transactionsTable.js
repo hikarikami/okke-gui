@@ -28,7 +28,7 @@ const generateRandomItems = (numTransactions) => {
 
 const data = generateRandomItems(5);
 
-function transactionsTable() {
+function TransactionsTable() {
     const [isMobileView, setIsMobileView] = useState(false);
 
     useEffect(() => {
@@ -121,7 +121,7 @@ function transactionsTable() {
     );
 }
 
-export default transactionsTable;
+export default TransactionsTable;
 
 
 
