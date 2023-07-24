@@ -395,7 +395,7 @@ a negative margin if required to bring them to the edge.
 }
 
 .btn.btn-lg {
-  @apply text-base;
+  @apply text-base h-12;
 }
 
 
@@ -578,4 +578,11 @@ input[type="radio"] + .radio-check:after {
 }
 input[type="password"]:focus + .password-checker {
  @apply flex;
+}
+
+@media (min-height: 900px) {
+  .yp-on-lg {
+    @apply pt-32;
+  }
+  
 }

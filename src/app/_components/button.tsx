@@ -57,7 +57,7 @@ const Button: React.FC<ButtonProps> = ({
                 break;
 
             case 'lg':
-            baseClasses += ' text-base px-6 py-4';
+            baseClasses += ' text-base px-6 py-3';
             break;
 
             case 'xl':
