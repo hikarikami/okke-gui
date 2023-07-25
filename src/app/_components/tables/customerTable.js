@@ -86,7 +86,7 @@ function CustomerTable() {
                     {data.map((item, index) => (
                         <div className="data-table-row" key={index}>
                             <div className="cell"><input type="checkbox" /></div>
-                              {/* Customer Details to */}
+                              {/* Customer Details */}
                             <div className="cell flex-col gap-y-0.5 !items-start">
                                 <div className="font-medium flex items-center gap-x-1">
                                     {item.type == 'PERS' ? <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>person</span> : <span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>business</span>}
@@ -101,7 +101,7 @@ function CustomerTable() {
                             <div className="cell !justify-end !text-right">
                                 <div>{item.totalOutstanding}</div>
                             </div>
-                              {/* Action Menu to */}
+                              {/* Action Menu */}
                             <div className="cell">
                                 <div className="action-buttons absolute right-4">
                                     <button>

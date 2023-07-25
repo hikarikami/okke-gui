@@ -86,20 +86,23 @@ ul label.card-list {
 .signup-bg {
   background-image: url('/signin-bg.png');
   background-repeat: no-repeat;
-  background-position:  60% 33%;
-  background-size: 110%;
+  background-position:  40% 40%;
+  background-size: 135%;
 }
 
 
 /***********************************
 ***  Link group
 ***********************************/
+.link-group {
+  @apply flex gap-x-4 justify-center;
+}
 
 .link-group a {
-  @apply relative text-sm hover:underline;
+  @apply text-colbert-500 no-underline relative hover:underline;
 }
 .link-group a:not(:last-of-type):after {
-  @apply content-[""] absolute -right-4 w-0.5 h-full bg-colbert-100;
+  @apply content-[""] absolute -right-2 w-0.5 h-full bg-colbert-100;
 }
 
 /***********************************
@@ -463,7 +466,7 @@ a negative margin if required to bring them to the edge.
 ************************************/
 
 label {
-  @apply text-sm text-colbert-500;
+  @apply text-xs text-colbert-500;
 }
 
 .input-group {

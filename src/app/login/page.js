@@ -8,6 +8,7 @@
 
 import Button from "../_components/button";
 import Image from 'next/image'
+import Link from "next/link";
 
 
 
@@ -23,7 +24,7 @@ export default function page() {
                 </svg> */}
                 <div class="w-full md:w-110 pt-10 md:pt-12 h-full flex flex-col">
 
-                    <svg className="w-24 md:w-28" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-24" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_805_83945)">
                             <path d="M18.3997 14.2671C28.8666 14.2671 36.7998 22.0003 36.7998 32.1335C36.7998 42.2671 28.8666 50.0003 18.3997 50.0003C7.93316 50.0003 0 42.2671 0 32.1335C0 22.0003 7.93316 14.2671 18.3997 14.2671ZM18.3997 41.8003C23.5999 41.8003 27.4663 37.667 27.4663 32.1335C27.4663 26.6669 23.5999 22.5336 18.3997 22.5336C13.2664 22.5336 9.33309 26.6669 9.33309 32.1335C9.33309 37.667 13.2664 41.8003 18.3997 41.8003Z" fill="#1B0A32" />
                             <path d="M74.0424 49.3333H62.665L52.3586 36.1491L48.0086 40.9008V49.3333H38.9736V0H48.0086V28.8541L60.3896 14.7999H71.7667L58.5157 29.3898L74.0424 49.3333Z" fill="#1B0A32" />
@@ -37,8 +38,8 @@ export default function page() {
                             </clipPath>
                         </defs>
                     </svg>
-                    <h1 className="text-lg md:text-2xl font-medium mt-6">Welcome back.</h1>
-                    <p className="text-sm md:text-base mt-2 md:mt-6">Great to see you again! Sign in with your email so we can get back into action. </p>
+                    <h1 className="text-lg md:text-xl lg:text-2xl font-medium mt-6">Welcome back.</h1>
+                    <p className="text-sm mt-2 md:mt-6">Great to see you again. Sign in with your email to get back to the action.</p>
                     <form className="mt-6 flex flex-col gap-y-5">
                         <div className="input-group  w-full">
                             <label>Email</label>
@@ -51,16 +52,17 @@ export default function page() {
 
                     </form>
                     <div className="btn-group mt-6 w-full !flex-col">
-                        <Button label='Create My Account' buttonType='primary' size='lg' className='!w-full' />
-                        <div className="w-full text-center mt-4">Already have an account? <a>Sign in</a></div>
+                     <Button label='Log In' buttonType='primary' size='lg' className='!w-full' />
+                        <Button label='Reset Password' buttonType='tertiary' size='lg' className='!w-full' />
                     </div>
-                    <div className="mt-12 md:mt-24 text-xs text-center">
-                        By continuing, you are indicating that you have read and agree to our <a>Terms of Use</a> as well as our <a >Privacy Policy</a>.
 
+                    <div className="w-full text-center text-sm mt-12 md:mt-24">Don't have an account? <Link href="/signup">Get started for free</Link></div>
+                    <div className="text-xs text-center link-group mt-7">
+                     <a>Terms of Use</a> <a>Privacy Policy</a> <a>Get help logging in</a>
                     </div>
                 </div>
             </div>
-            <div className="sticky hidden overflow-hidden md:flex flex-col justify-center items-center bg-colbert-100 w-5/12 top-0 right-0 h-full min-h-screen self-stretch">
+            <div className="sticky hidden overflow-hidden md:flex flex-col justify-center items-center bg-colbert-50 w-5/12 top-0 right-0 h-full min-h-screen self-stretch">
                 {/* <Image
                     src="/login-bg-2.svg"
                     width={380}
@@ -74,10 +76,10 @@ export default function page() {
                     width={420}
                     height={400}
                     alt="Picture"
-                    className="mx-auto w-full"
+                    className="mx-auto w-10/12"
                 />
 
-                <p className="text-base font-medium text-colbert-600 z-10 px-24 w-full text-center mb-24 mt-12">Spend less time on bookkeeping and more time growing your business.</p>
+                <p className="text-base font-light text-colbert-600 z-10 px-16 xl:px-24 w-full text-center mb-24 mt-12 ">Okke let's you keep on top of your accounting with style and swagger.</p>
                 <div className="w-10/12 border rounded flex flex-row justify-start items-center p-4 gap-x-2">
                     <Image
                         src="/lightbulb.svg"
@@ -86,7 +88,7 @@ export default function page() {
                         alt="Picture"
                         className="mx-auto w-12"
                     />
-                    <p className="italic text-xs">Did you know: Invoices featuring your business logo are on average more than 3x likely to get paid.</p>
+                    <p className="text-normal italic text-xs">Did you know: Invoices featuring your business logo are on average more than 3x likely to get paid.</p>
                 </div>
             </div>
         </>

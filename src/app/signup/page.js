@@ -8,6 +8,7 @@
 
 import Button from "../_components/button";
 import Image from 'next/image'
+import Link from "next/link";
 
 
 
@@ -19,8 +20,8 @@ export default function page() {
         <>
             <div class="w-12/12 md:w-8/12 lg:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
 
-                <div class="w-full md:w-100 pt-12 h-full flex flex-col">
-                    <svg className="w-28" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="w-full md:w-110 pt-12 h-full flex flex-col">
+                    <svg className="w-24" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_805_83945)">
                             <path d="M18.3997 14.2671C28.8666 14.2671 36.7998 22.0003 36.7998 32.1335C36.7998 42.2671 28.8666 50.0003 18.3997 50.0003C7.93316 50.0003 0 42.2671 0 32.1335C0 22.0003 7.93316 14.2671 18.3997 14.2671ZM18.3997 41.8003C23.5999 41.8003 27.4663 37.667 27.4663 32.1335C27.4663 26.6669 23.5999 22.5336 18.3997 22.5336C13.2664 22.5336 9.33309 26.6669 9.33309 32.1335C9.33309 37.667 13.2664 41.8003 18.3997 41.8003Z" fill="#1B0A32" />
                             <path d="M74.0424 49.3333H62.665L52.3586 36.1491L48.0086 40.9008V49.3333H38.9736V0H48.0086V28.8541L60.3896 14.7999H71.7667L58.5157 29.3898L74.0424 49.3333Z" fill="#1B0A32" />
@@ -34,8 +35,8 @@ export default function page() {
                             </clipPath>
                         </defs>
                     </svg>
-                    <h1 className="text-lg md:text-2xl font-medium mt-6">Get started today for free, no credit card required.</h1>
-                    <p className="text-sm md:text-base mt-2 md:mt-6">Sign up and start growing your business.</p>
+                    <h1 className="text-lg md:text-xl lg:text-2xl font-medium mt-6">Get started today for free, no credit card required.</h1>
+                    <p className="text-sm mt-2 md:mt-6">Sign up and start growing your business.</p>
                     <form className="mt-6 flex flex-col gap-y-5">
                         <div className="input-group  w-full">
                             <label>Full Name</label>
@@ -48,7 +49,7 @@ export default function page() {
                         <div className="input-group  w-full">
                             <label>Strong Password</label>
                             <input type="password" className="w-full" placeholder="" />
-                            <div className="password-checker mt-4 text-sm text-colbert-500 p-4 border border-colbert-200 rounded shadow-sm bg-white">
+                            <div className="password-checker mt-2    text-sm text-colbert-500">
                                 <ul className="flex flex-col gap-y-1 w-full items-start">
                                     <li className="flex flex-row justify-center gap-x-1 text-emerald-500"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>Minimum of 12 Characters</span></li>
                                     <li className="flex flex-row justify-center gap-x-1"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>Minimum of 12 Characters</span></li>
@@ -60,25 +61,18 @@ export default function page() {
                     </form>
                     <div className="btn-group mt-6 w-full !flex-col">
                         <Button label='Create My Account' buttonType='primary' size='lg' className='!w-full' />
-                        <div className="w-full text-center mt-4">Already have an account? <a>Sign in</a></div>
+                        <div className="w-full text-sm text-center mt-2">Already have an account? <Link href="/login">Sign in</Link></div>
                     </div>
-                    <div className="mt-24 text-xs text-center">
+                    <div className="mt-16 xl:mt-24 text-xs text-center">
                         By continuing, you are indicating that you have read and agree to our <a>Terms of Use</a> as well as our <a >Privacy Policy</a>.
 
                     </div>
                 </div>
             </div>
-            <div className="sticky hidden md:flex items-end align-middle bg-gradient-to-br from-lavender-400 to-tangerine-400 w-4/12 top-0 right-0 h-full min-h-screen self-stretch">
-                {/* <Image
-                    src="/login-bg.png"
-                    width={500}
-                    height={500}
-                    alt="Picture of the author"
-                    className="w-full -mx-24"
-                /> */}
+            <div className="sticky hidden overflow-hidden md:flex flex-col justify-end items-center bg-gradient-to-br from-lavender-400 to-tangerine-400  w-5/12 top-0 right-0 h-full min-h-screen self-stretch">
 
                 <div className="absolute top-0 bottom-0 left-0 right-0 signup-bg"></div>
-                <p className="text-lg font-medium text-white z-10 px-24 text-center mb-24">Spend less time on bookkeeping and more time growing your business.</p>
+                <p className="text-lg tracking-wide font-medium text-white z-10 px-16 xl:px-24 text-center mb-24 lg:mb-32">Spend less time on bookkeeping and more time growing your business.</p>
             </div>
         </>
     )
