@@ -56,7 +56,7 @@ export default function page() {
                         <Button label='Reset Password' buttonType='tertiary' size='lg' className='!w-full' />
                     </div>
 
-                    <div className="w-full text-center text-sm mt-12 md:mt-24">Don't have an account? <Link href="/signup">Get started for free</Link></div>
+                    <div className="w-full text-center text-sm mt-12 md:mt-24">Don&apos;t have an account? <Link href="/signup">Get started for free</Link></div>
                     <div className="text-xs text-center link-group mt-7">
                      <a>Terms of Use</a> <a>Privacy Policy</a> <a>Get help logging in</a>
                     </div>
