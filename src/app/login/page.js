@@ -54,7 +54,7 @@ export default function page() {
                     <div className="btn-group mt-6 w-full !flex-col">
                      <Button label='Log In' buttonType='primary' size='lg' className='!w-full' />
                         <Button label='Reset Password' buttonType='tertiary' size='lg' className='!w-full' />
-                    </div>
+                    </div>  
 
                     <div className="w-full text-center text-sm mt-12 md:mt-24">Don&apos;t have an account? <Link href="/signup">Get started for free</Link></div>
                     <div className="text-xs text-center link-group mt-7">
@@ -79,7 +79,7 @@ export default function page() {
                     className="mx-auto w-10/12"
                 />
 
-                <p className="text-base font-light text-colbert-600 z-10 px-16 xl:px-24 w-full text-center mb-24 mt-12 ">Okke let's you keep on top of your accounting with style and swagger.</p>
+                <p className="text-base font-light text-colbert-600 z-10 px-16 xl:px-24 w-full text-center mb-24 mt-12 ">Okke let&apos;s you keep on top of your accounting with style and swagger.</p>
                 <div className="w-10/12 border rounded flex flex-row justify-start items-center p-4 gap-x-2">
                     <Image
                         src="/lightbulb.svg"
