@@ -20,7 +20,7 @@ export default function Page() {
       <div className="bg-default-bg flex justify-center items-center min-h-screen">
 
        
-        <div className="bg-white border-colbert-50 shadow-lg px-12 py-24 rounded-lg md:-mt-[600px]">
+        <div className="bg-white bg border-colbert-100 shadow-lg px-12 py-24 rounded-lg md:-mt-[600px]">
         <Player
           className='w-96 mt-24'
           autoplay
@@ -33,6 +33,7 @@ export default function Page() {
           <div className="btn-group !w-full !flex-col">
             <Link href="/business/documents"><Button label="App Pages" href="business/documents" className='!w-full' size='lg' /></Link>
             <Link href="/signup/signup"><Button label="Signup / Onboarding" className='!w-full' size='lg' /></Link>
+            <Link href="https://github.com/hikarikami/okke-gui"><Button label="Github Page" className='!w-full' size='lg' buttonType='secondary' /></Link>
           </div>
         </div></div>
 
