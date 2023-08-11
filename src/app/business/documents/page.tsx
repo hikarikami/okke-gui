@@ -5,10 +5,12 @@
  */
 "use client"; // This is a client component 👈🏽
 
-import Filters from "../_components/filters";
-import PageHeader from "../_components/pageHeader";
-import DocumentsTable from "../_components/tables/documentsTable"
-import CustomerTable from "../_components/tables/customerTable";
+
+import PageHeader from "../../_components/pageHeader";
+import DocumentsTable from "../../_components/tables/documentsTable"
+import CustomerTable from "../../_components/tables/customerTable";
+
+import Filters from "../../_components/filters"
 
 
 /**

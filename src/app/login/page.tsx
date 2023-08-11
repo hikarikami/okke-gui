@@ -18,11 +18,11 @@ export default function page() {
 
     return (
         <>
-            <div class="w-12/12 md:w-8/12 lg:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
+            <div className="w-12/12 md:w-8/12 lg:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
                 {/* <svg className="absolute rotate-180 bottom-0 -left-96 w-[800px] -z-1 opacity-75" viewBox="0 0 1156 956" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.8926 1.5283C258.03 231.134 311.595 471.527 191.905 529.563C72.2146 587.599 -44.2865 427.787 19.4089 365.722C83.1043 303.658 244.409 259.572 357.588 538.54C503.091 897.179 695.644 1098.14 1155.22 833.337" stroke="#1B0A32" stroke-width="2" stroke-dasharray="8 12" />
                 </svg> */}
-                <div class="w-full md:w-110 pt-10 md:pt-12 h-full flex flex-col">
+                <div className="w-full md:w-110 pt-10 md:pt-12 h-full flex flex-col">
 
                     <svg className="w-24" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_805_83945)">

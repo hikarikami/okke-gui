@@ -225,6 +225,13 @@ a negative margin if required to bring them to the edge.
   }
 }
 
+/** Invoice Line Items table **/
+
+  .data-table.line-items .data-table-header,
+  .data-table.line-items .data-table-row {
+    grid-template-columns: 330px 140px 140px 140px 94px auto;
+}
+
 
 
 
@@ -378,6 +385,9 @@ a negative margin if required to bring them to the edge.
 *  
 ************************************/
 
+a   {
+  @apply no-underline hover:no-underline;
+}
 
 .btn svg {
   @apply mr-1 inline-block w-4;
@@ -478,6 +488,14 @@ input[type="text"], input[type="password"],
 select,
 textarea {
   @apply mt-1 appearance-none rounded border border-colbert-300 px-3 py-2.5 shadow-sm;
+}
+
+.input-group input.typeahead {
+  @apply relative;
+}
+
+.input-group input.typeahead + svg {
+  @apply absolute right-4;
 }
 
 select {

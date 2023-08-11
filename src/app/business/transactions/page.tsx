@@ -5,9 +5,9 @@
  */
 "use client"; // This is a client component 👈🏽
 
-import Filters from "../_components/filters"
-import PageHeader from "../_components/pageHeader"
-import TransactionsTable from "../_components/tables/transactionsTable"
+import Filters from "../../_components/filters"
+import PageHeader from "../../_components/pageHeader"
+import TransactionsTable from "../../_components/tables/transactionsTable"
 
 
 

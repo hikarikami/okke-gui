@@ -24,14 +24,15 @@ const Sidebar = () => {
 
                 {/* Nav Links  */}
                 <div className="w-full flex flex-col gap-y-1.5 mt-6">
-                <Navlinks href="/expenses" label="Expenses" />
-                <Navlinks href="/income" label="Income" />
-                <Navlinks href="/documents" label="Documents" />
-                <Navlinks href="/customers" label="Customers" />
-                <Navlinks href="/inventory" label="Inventory" />
-                <Navlinks href="/bank-accounts" label="Bank Accounts" />
-                <Navlinks href="/invoices" label="Invoices" />
-                <Navlinks href="/transactions" label="Transactions" />
+                <Navlinks href="/business/expenses" label="Expenses" />
+                <Navlinks href="/business/income" label="Income" />
+                <Navlinks href="/business/documents" label="Documents" />
+                <Navlinks href="/business/customers" label="Customers" />
+                <Navlinks href="/business/inventory" label="Inventory" />
+                <Navlinks href="/business/bank-accounts" label="Bank Accounts" />
+                <Navlinks href="/business/invoices" label="Invoices" />
+                <Navlinks href="/business/transactions" label="Transactions" />
+                <Navlinks href="/" label="Back To Test Page" />
                 </div>
             </nav>
         </>

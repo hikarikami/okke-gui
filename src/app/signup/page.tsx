@@ -18,9 +18,9 @@ export default function page() {
 
     return (
         <>
-            <div class="w-12/12 md:w-8/12 lg:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
+            <div className="w-12/12 md:w-8/12 lg:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
 
-                <div class="w-full md:w-110 pt-12 h-full flex flex-col">
+                <div className="w-full md:w-110 pt-12 h-full flex flex-col">
                     <svg className="w-24" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_805_83945)">
                             <path d="M18.3997 14.2671C28.8666 14.2671 36.7998 22.0003 36.7998 32.1335C36.7998 42.2671 28.8666 50.0003 18.3997 50.0003C7.93316 50.0003 0 42.2671 0 32.1335C0 22.0003 7.93316 14.2671 18.3997 14.2671ZM18.3997 41.8003C23.5999 41.8003 27.4663 37.667 27.4663 32.1335C27.4663 26.6669 23.5999 22.5336 18.3997 22.5336C13.2664 22.5336 9.33309 26.6669 9.33309 32.1335C9.33309 37.667 13.2664 41.8003 18.3997 41.8003Z" fill="#1B0A32" />

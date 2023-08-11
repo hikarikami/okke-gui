@@ -1,4 +1,5 @@
 import React, { ReactNode, ButtonHTMLAttributes } from 'react';
+import Link from 'next/link'
 
 type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'call-to-action';
 
@@ -14,6 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   iconAfter?: ReactNode;
   size?: ButtonSize;
   className?: string;
+  href?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   iconAfter,
   size = 'sm',
   className = '',
+  href="/",
   ...props
 }) => {
     const getButtonClasses = (): string => {
@@ -69,6 +72,7 @@ const Button: React.FC<ButtonProps> = ({
     };
 
     return (
+        
         <button
             className={`${getButtonClasses()} ${className}`}
             {...props}
@@ -77,6 +81,7 @@ const Button: React.FC<ButtonProps> = ({
             {label}
             {iconAfter && <span className="ml-2">{iconAfter}</span>}
         </button>
+       
     );
 };
 

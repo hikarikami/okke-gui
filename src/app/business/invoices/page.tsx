@@ -5,9 +5,9 @@
  */
 "use client"; // This is a client component 👈🏽
 
-import Filters from "../_components/filters"
-import PageHeader from "../_components/pageHeader"
-import InvoiceTable from "../_components/tables/invoiceTable"
+import Filters from "../../_components/filters"
+import PageHeader from "../../_components/pageHeader"
+import InvoiceTable from "../../_components/tables/invoiceTable"
 
 export default function page() {
   return (

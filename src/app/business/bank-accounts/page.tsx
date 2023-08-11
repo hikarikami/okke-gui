@@ -1,15 +1,16 @@
 /*
  * 
- * Customer Page
+ * Bank Accounts
  * 
  */
 
 "use client"; // This is a client component 👈🏽
 
-import Filters from "../_components/filters"
-import PageHeader from "../_components/pageHeader"
-import InventoryTable from "../_components/tables/inventoryTable"
+import Filters from "../../_components/filters"
+import PageHeader from "../../_components/pageHeader"
+import BankTable from "../../_components/tables/bankTable"
 import { useEffect, useState } from 'react';
+
 
 
 /**
@@ -31,25 +32,13 @@ export default function page() {
 
   return (
     <>
-      <PageHeader title="Inventory" />
+      <PageHeader title="Bank Accounts" />
       <div className="w-full">
         <Filters />
         <div className="-mx-4 md:mx-0 card md:w-full mt-3 rounded-none md:rounded-md">
-          <InventoryTable />
+          <BankTable />
         </div>
-      </div>  
+      </div>
     </>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-

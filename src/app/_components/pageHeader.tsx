@@ -12,8 +12,8 @@ const PageHeader: React.FC<PageTitleProps> = ({ title }) => {
             <h1 className="text-2xl w-full">{title}</h1>
             <div className="w-full sm:w-auto sm:ml-auto">
                 <div className="btn-group mt-4 sm:mt-auto">
-                    <Button label='New expense' buttonType='primary' size='md' className='order-1 md:order-2' />
-                    <Button label='New expense' buttonType='secondary' size='md' className='order-2 md:order-1'/>
+                    <Button label='New expense' buttonType='primary' size='md' className='order-2' />
+                    <Button label='Options' buttonType='secondary' size='md' className='order-1'/>
                 </div>
             </div>
         </div>
