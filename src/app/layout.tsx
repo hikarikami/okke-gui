@@ -31,7 +31,7 @@ export default function RootLayout({
             {/* <Lightbox /> */}
             {/* <DrawerContainer drawerType="documentPreviewDrawer" /> */}
             <div className="flex w-full flex-row">
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <div className="content-wrapper container pt-12">
                     <TopNav />
                     {children}
