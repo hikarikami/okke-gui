@@ -30,7 +30,7 @@ import Filters from "../../_components/filters"
 export default function page() {
   return (
 
-    <>
+    <div className="">
     <PageHeader title="Documents" />
       <div className="w-full">
         <Filters />
@@ -38,7 +38,7 @@ export default function page() {
           <DocumentsTable />
         </div>
       </div>  
-    </>
+    </div>
 
   )
 }

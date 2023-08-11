@@ -27,17 +27,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={inter.className}>
-            {/* <Lightbox /> */}
-            {/* <DrawerContainer drawerType="documentPreviewDrawer" /> */}
-            <div className="flex w-full flex-row">
-                {/* <Sidebar /> */}
-                <div className="content-wrapper container pt-12">
-                    <TopNav />
-                    {children}
-                </div>
-            </div>
-        </body>
+            <body className={inter.className}>
+                {/* <Lightbox /> */}
+                {children}
+            </body>
         </html>
     )
 }

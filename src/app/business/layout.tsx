@@ -24,8 +24,8 @@ export default function BusinessLayout({
     children: React.ReactNode
 }) {
     return (
-        <body className={inter.className}>
-            {/* <Lightbox /> */}
+
+        <div className="flex w-full flex-row">
             <DrawerContainer drawerType="documentPreviewDrawer" />
             <div className="flex w-full flex-row">
                 <Sidebar />
@@ -34,8 +34,7 @@ export default function BusinessLayout({
                     {children}
                 </div>
             </div>
-
-        </body>
+        </div>
     )
 }
 

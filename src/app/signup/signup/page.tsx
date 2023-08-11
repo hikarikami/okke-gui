@@ -6,7 +6,7 @@
 
 "use client"; // This is a client component 👈🏽
 
-import Button from "../_components/button";
+import Button from '@/app/_components/button';
 import Image from 'next/image'
 import Link from "next/link";
 
@@ -60,8 +60,8 @@ export default function page() {
                         </div>
                     </form>
                     <div className="btn-group mt-6 w-full !flex-col">
-                        <Button label='Create My Account' buttonType='primary' size='lg' className='!w-full' />
-                        <div className="w-full text-sm text-center mt-2">Already have an account? <Link href="/login">Sign in</Link></div>
+                    <Link href={'/'}><Button label='Create My Account' buttonType='primary' size='lg' className='!w-full' /></Link>
+                        <div className="w-full text-sm text-center mt-2">Already have an account? <Link href="/signup/login">Sign in</Link></div>
                     </div>
                     <div className="mt-16 xl:mt-24 text-xs text-center">
                         By continuing, you are indicating that you have read and agree to our <a>Terms of Use</a> as well as our <a >Privacy Policy</a>.
