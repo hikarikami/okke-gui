@@ -65,7 +65,7 @@ export default function Page() {
                 <path d="M11.06 5.53125L8 8.58458L4.94 5.53125L4 6.47125L8 10.4713L12 6.47125L11.06 5.53125Z" fill="#121224" />
               </svg>
             </div>
-          </div>
+          </div>z``
 
           <div id="invoice-details" className="flex flex-col w-64 gap-y-5">
             <div className="input-group">
@@ -233,7 +233,7 @@ export default function Page() {
             <div className="px-6 py-2 btn-group" >
               <Button iconBefore={<span className="material-icons-outlined" style={{ fontSize: "1.25rem", lineHeight: "unset", marginTop: "4px" }}>add_circle</span>} label="Add Line Item" size="md" buttonType="tertiary" />
               <Button iconBefore={<span className="material-icons-outlined" style={{ fontSize: "1.25rem", lineHeight: "unset", marginTop: "4px" }}>add_circle</span>} label="Add Discount" size="md" buttonType="tertiary" />
-              <Image src={'/payment-group.svg'} width={200} height={120} />
+              <Image src={'/payment-group.svg'} width={200} height={120} alt="Payment Group"/>
             </div>
             
           </div>
