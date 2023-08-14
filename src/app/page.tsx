@@ -20,7 +20,7 @@ export default function Page() {
       <div className="bg-default-bg flex justify-center items-center min-h-screen">
 
        
-        <div className="bg-white bg border-colbert-100 shadow-lg px-12 py-24 rounded-lg md:-mt-[600px]">
+        <div className="bg-white bg border-colbert-100 shadow-lg px-12 py-24 rounded-xl md:-mt-[5%]">
         <Player
           className='w-96 mt-24'
           autoplay

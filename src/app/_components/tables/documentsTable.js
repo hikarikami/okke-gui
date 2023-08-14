@@ -68,7 +68,7 @@ function DocumentsTable() {
                             <div className="text-xs text-colbert-500">{item.date}</div>
                             {/* Tag/s */}
                             <div className="cell">
-                                <div className="chip-container chips-lg flex-wrap">
+                                <div className="chip-container chips-md flex-wrap">
                                     <div className="chip colbert subtle">{item.tag}</div>
                                 </div>
                             </div>
