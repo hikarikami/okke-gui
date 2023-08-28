@@ -85,16 +85,14 @@ export default function Page() {
             </div>
 
             {/* Line Item Row */}
-            <div className="data-table-row">
+            <div className="data-table-row ">
               {/* <div className="cell"><input type="checkbox" /></div> */}
               {/* Item Details */}
               <div className="cell flex-col gap-y-0.5 !items-start justify-items-start">
                 <div className="input-group w-full">
                   <input type="text" className="w-full typeahead" placeholder="Item Code" />
                 </div>
-                <div className="input-group w-full">
-                  <textarea rows={3} className="w-full" placeholder='Description of Item or Service...' />
-                </div>
+                
               </div>
 
               {/* Price */}
@@ -137,6 +135,10 @@ export default function Page() {
                   <span className="material-icons-outlined">delete</span>
                 </button>
               </div>
+
+              <div className="input-group w-full">
+                  <textarea rows={3} className="w-full" placeholder='Description of Item or Service...' />
+                </div>
             </div>
 
             {/* Line Item Row */}

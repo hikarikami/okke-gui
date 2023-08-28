@@ -1,6 +1,6 @@
 /*
  * 
- * Signup
+ * Reset Password
  * 
  */
 
@@ -19,7 +19,7 @@ export default function page() {
 
     return (
         <>
-            <div className="pt-16 md:pt-0 w-full lg:w-6/12 xl:w-8/12 2xl:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
+            <div className="pt-16 md:pt-0 w-full md:w-6/12 lg:w-8/12 xl:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
                 {/* <svg className="absolute rotate-180 bottom-0 -left-96 w-[800px] -z-1 opacity-75" viewBox="0 0 1156 956" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.8926 1.5283C258.03 231.134 311.595 471.527 191.905 529.563C72.2146 587.599 -44.2865 427.787 19.4089 365.722C83.1043 303.658 244.409 259.572 357.588 538.54C503.091 897.179 695.644 1098.14 1155.22 833.337" stroke="#1B0A32" stroke-width="2" stroke-dasharray="8 12" />
                 </svg> */}
@@ -39,7 +39,7 @@ export default function page() {
                             </clipPath>
                         </defs>
                     </svg>
-                    <h1 className="text-lg md:text-xl lg:text-2xl font-medium mt-6">Hi there, Welcome back.</h1>
+                    <h1 className="text-lg md:text-xl lg:text-2xl font-medium mt-6">Let's reset your password.</h1>
                     <p className="text-sm mt-2 md:mt-6">Great to see you again. Sign in with your email to get back to the action.</p>
                     <form className="mt-6 flex flex-col gap-y-5">
                         <div className="input-group  w-full">
@@ -63,7 +63,7 @@ export default function page() {
                     </div>
                 </div>
             </div>
-            <div className="sticky hidden overflow-hidden md:flex flex-col justify-center items-center bg-colbert-50 lg:w-6/12 xl:w-4/12 2xl:w-3/12 top-0 right-0 h-full min-h-screen self-stretch">
+            <div className="sticky hidden overflow-hidden md:flex flex-col justify-center items-center bg-colbert-50 md:w-6/12 lg:w-4/12 xl:w-3/12 top-0 right-0 h-full min-h-screen self-stretch">
                 {/* <Image
                     src="/login-bg-2.svg"
                     width={380}
@@ -77,10 +77,10 @@ export default function page() {
                     width={420}
                     height={400}
                     alt="Picture"
-                    className="mx-auto w-6/12 lg:w-10/12 xl:w-8/12"
+                    className="mx-auto w-6/12 md:w-10/12 lg:w-8/12 x"
                 />
 
-                <p className="text-lg font-light text-colbert-600 z-10 w-[440px] text-center mb-24 mt-12 ">Okke let&apos;s you keep on top of your accounting with style and swagger.</p>
+                <p className="text-lg font-light text-colbert-600 z-10 px-12 xl:px-20 w-full text-center mb-24 mt-12 ">Okke let&apos;s you keep on top of your accounting with style and swagger.</p>
      
             </div>
         </>

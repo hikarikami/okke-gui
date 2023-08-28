@@ -84,11 +84,13 @@ ul label.card-list {
 }
 
 .signup-bg {
-  background-image: url('/signin-bg.png');
+  background-image: url('/signup-long.png');
   background-repeat: no-repeat;
-  background-position:  40% 40%;
-  background-size: 135%;
+  background-position: 40% 60%;
+  background-size: 115%;
 }
+
+
 
 
 /***********************************

@@ -107,7 +107,6 @@ function DocumentsTable() {
                         <div className="cell">Tag/s</div>
                         <div className="cell">Attached to</div>
                         <div className="cell"></div>
-
                     </div>
 
                     {data.map((item, index) => (

@@ -18,9 +18,9 @@ export default function page() {
 
     return (
         <>
-            <div className="w-12/12 md:w-8/12 lg:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
-
-                <div className="w-full md:w-110 pt-12 h-full flex flex-col">
+        {/* Login Panel */}
+            <div className="pt-16 md:pt-0 w-full lg:w-6/12 xl:w-8/12 2xl:w-9/12 flex flex-shrink-0 px-6 justify-center items-center h-full md:min-h-screen z-10">
+                <div className="w-full md:w-[440px] h-full flex flex-col">
                     <svg className="w-24" viewBox="0 0 158 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_805_83945)">
                             <path d="M18.3997 14.2671C28.8666 14.2671 36.7998 22.0003 36.7998 32.1335C36.7998 42.2671 28.8666 50.0003 18.3997 50.0003C7.93316 50.0003 0 42.2671 0 32.1335C0 22.0003 7.93316 14.2671 18.3997 14.2671ZM18.3997 41.8003C23.5999 41.8003 27.4663 37.667 27.4663 32.1335C27.4663 26.6669 23.5999 22.5336 18.3997 22.5336C13.2664 22.5336 9.33309 26.6669 9.33309 32.1335C9.33309 37.667 13.2664 41.8003 18.3997 41.8003Z" fill="#1B0A32" />
@@ -35,7 +35,7 @@ export default function page() {
                             </clipPath>
                         </defs>
                     </svg>
-                    <h1 className="text-lg md:text-xl lg:text-2xl font-medium mt-6">Get started today for free, no credit card required.</h1>
+                    <h1 className="text-lg lg:text-xl xl:text-2xl font-medium mt-6">Start your free trial today, no credit card required.</h1>
                     <p className="text-sm mt-2 md:mt-6">Sign up and start growing your business.</p>
                     <form className="mt-6 flex flex-col gap-y-5">
                         <div className="input-group  w-full">
@@ -49,7 +49,7 @@ export default function page() {
                         <div className="input-group  w-full">
                             <label>Strong Password</label>
                             <input type="password" className="w-full" placeholder="" />
-                            <div className="password-checker mt-2    text-sm text-colbert-500">
+                            <div className="password-checker mt-2  text-sm text-colbert-500">
                                 <ul className="flex flex-col gap-y-1 w-full items-start">
                                     <li className="flex flex-row justify-center gap-x-1 text-emerald-500"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>Minimum of 12 Characters</span></li>
                                     <li className="flex flex-row justify-center gap-x-1"><span className="material-icons-outlined" style={{ fontSize: "1.125rem", lineHeight: "unset" }}>check</span><span>Minimum of 12 Characters</span></li>
@@ -69,10 +69,12 @@ export default function page() {
                     </div>
                 </div>
             </div>
-            <div className="sticky hidden overflow-hidden md:flex flex-col justify-end items-center bg-gradient-to-br from-lavender-400 to-tangerine-400  w-5/12 top-0 right-0 h-full min-h-screen self-stretch">
+
+            {/* Illustration */}
+            <div className="sticky hidden overflow-hidden md:flex lg:w-6/12 xl:w-5/12 2xl:w-3/12 flex-col justify-end items-center bg-gradient-to-br from-lavender-400 to-tangerine-400  top-0 right-0 h-full min-h-screen self-stretch">
 
                 <div className="absolute top-0 bottom-0 left-0 right-0 signup-bg"></div>
-                <p className="text-lg tracking-wide font-medium text-white z-10 px-16 xl:px-24 text-center mb-24 lg:mb-32">Spend less time on bookkeeping and more time growing your business.</p>
+                <p className="text-xl leading-relaxed tracking-wide font-medium text-white z-10 px-16 xl:px-24 text-center mb-24 lg:mb-[20%]">Spend less time on bookkeeping and more time growing your business.</p>
             </div>
         </>
     )

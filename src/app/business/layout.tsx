@@ -26,7 +26,7 @@ export default function BusinessLayout({
     return (
 
         <div className="flex w-full flex-row">
-            <DrawerContainer drawerType="documentPreviewDrawer" />
+            {/* <DrawerContainer drawerType="documentSelectDrawer" /> */}
             <div className="flex w-full flex-row">
                 <Sidebar />
                 <div className="content-wrapper container pt-12">
