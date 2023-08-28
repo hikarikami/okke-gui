@@ -39,7 +39,7 @@ export default function page() {
                             </clipPath>
                         </defs>
                     </svg>
-                    <h1 className="text-lg md:text-xl lg:text-2xl font-medium mt-6">Let's reset your password.</h1>
+                    <h1 className="text-lg md:text-xl lg:text-2xl font-medium mt-6">Let&apos;s reset your password.</h1>
                     <p className="text-sm mt-2 md:mt-6">Great to see you again. Sign in with your email to get back to the action.</p>
                     <form className="mt-6 flex flex-col gap-y-5">
                         <div className="input-group  w-full">
