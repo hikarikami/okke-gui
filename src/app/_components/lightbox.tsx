@@ -21,7 +21,7 @@ const Lightbox = () => {
                 </div>
             </nav>
             {/* Full page Embed Object */}
-            <embed className="w-full h-full" src="./CustomerInvoice-16.pdf#zoom=150"></embed>
+            <embed className="w-full h-full" src="http://ryankeon.com.au/ux-case-study.pdf#zoom=150"></embed>
         </div>
     );
 };
